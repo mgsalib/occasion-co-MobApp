@@ -34,12 +34,15 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
-);
+    primary:    #2D1858,
+    vilot-dark: #221242,
+    yellow:     #FFD108,
+    green:      #188B29,
+    red:        #A50B00,
+    gray-dark:  #4A4A4A,
+    gray:       #9B9B9B,
+    white:      #FFFFFF
+    );
 
 
 // App iOS Variables
@@ -84,5 +87,9 @@ $colors: (
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+// @import "roboto";
+// @import "noto-sans";
+@import "fonts";
+@import "commen";
+@import "colors";
+
