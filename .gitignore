@@ -61,3 +61,6 @@ src/pages/register/register.module.ts
 src/theme/_colors.scss
 src/theme/_commen.scss
 src/theme/_fonts.scss
+src/pages/login/login.ts
+.gitignore
+src/pages/login/login.html
