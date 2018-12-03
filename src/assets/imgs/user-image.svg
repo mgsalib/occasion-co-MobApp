@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #188b29;
+      }
+    </style>
+  </defs>
+  <g id="Group_10" data-name="Group 10" transform="translate(-128 -80)">
+    <circle id="AppLogo" class="cls-1" cx="32" cy="32" r="32" transform="translate(128 80)"/>
+    <path id="Path_3" data-name="Path 3" class="cls-2" d="M17,19.125A9.563,9.563,0,1,0,7.438,9.563,9.565,9.565,0,0,0,17,19.125Zm8.5,2.125H21.841a11.56,11.56,0,0,1-9.682,0H8.5A8.5,8.5,0,0,0,0,29.75v1.063A3.188,3.188,0,0,0,3.188,34H30.813A3.188,3.188,0,0,0,34,30.813V29.75A8.5,8.5,0,0,0,25.5,21.25Z" transform="translate(143 95)"/>
+  </g>
+</svg>
