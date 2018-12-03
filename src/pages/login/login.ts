@@ -23,7 +23,7 @@ export class LoginPage {
   }
 
   openRegister() {
-    this.navCtrl.push("FavouriteTransfersPage");
+    this.navCtrl.push("RegisterPage");
   }
 
 }
