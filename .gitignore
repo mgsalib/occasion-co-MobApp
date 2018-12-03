@@ -64,3 +64,5 @@ src/theme/_fonts.scss
 src/pages/login/login.ts
 .gitignore
 src/pages/login/login.html
+.gitignore
+.gitignore
