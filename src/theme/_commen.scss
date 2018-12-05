@@ -337,10 +337,22 @@
   }
 }
 
+.input-field {
+  .text-input[disabled] {
+    text-transform: capitalize;
+    opacity: 1;
+  }
+}
+
 .button-field {
   width: 100%;
   background: transparent;
   height: 45px;
   border-radius: 3px;
+  text-transform: capitalize;
+}
+
+::placeholder {
+  color: map-get($colors, txt-gray);
   text-transform: capitalize;
 }
