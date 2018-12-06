@@ -37,13 +37,13 @@ export class RegisterFormPage {
   }
 
   register() {
-    // http://apicoretest.bebrand.tv/api/User/Add?UserName=user&Password=asd&Email=asd&FirstName=asd&LastName=asd
     var data = {
       UserName: this.username,
       Password: this.password,
       Email: this.email,
       FirstName: this.firstname,
-      LastName: this.lastname
+      LastName: this.lastname,
+      Phone: this.phone
     };
     this.httpCall.post(this.globals.servicesURL.register, data).subscribe(result => {
       debugger
