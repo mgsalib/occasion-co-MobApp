@@ -1,0 +1,33 @@
+{
+    "general": {
+        "confirm": "تأكيد",
+        "cancel": "إلفاء",
+        "toast-close": "أغلق",
+        "submit": "تأكيد",
+        "ok": "موافق",
+        "next": "التالى",
+        "general-error": "خطأ فى النظام، نأمل المحاولة مرة أخرى لاحقاً",
+        "logout-title": "تسجيل الخروج",
+        "logout-msg": "هل انت متأكد من انك تريد تسجيل الخروج؟",
+        "connection": "نأمل التحقق من وجود إتصال بالشبكة",
+        "timeout": "لم نتمكن من تنفيذ طلبك، نأمل المحاولة مرة اخرى",
+        "down": "عفواً، الخدمة غير متاحة في الوقت الحالي، ،نأمل المحاولة لاحقاُ",
+        "done": "إنهاء",
+        "success": "عملية ناجحة",
+        "save": "حفظ",
+        "delete": "حذف",
+        "enter": "أدخل ",
+        "please": "من فضلك ",
+        "edit": "تعديل",
+        "add": "إضافه",
+        "title": "Occasion and Co",
+        "info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the1500s,"
+    },
+    "login": {
+        "login": "Login",
+        "new-account": "New Account",
+        "fb": "Facebook Account",
+        "email": "Email",
+        "passowrd": "Passowrd"
+    },
+}

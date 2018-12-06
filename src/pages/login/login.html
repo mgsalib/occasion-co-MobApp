@@ -20,13 +20,13 @@
         <!-- username field -->
         <ion-item class="input-field margin-b-8">
           <ion-label stacked class="font-12 txt-gray margin-b-4">{{'login.email' | translate}}</ion-label>
-          <ion-input type="text" [(ngModel)]="email" class="font-16 txt-yellow"></ion-input>
+          <ion-input type="text" [(ngModel)]="email" class="font-16 txt-yellow" placeholder="{{'general.enter' | translate}}{{'login.email' | translate}}"></ion-input>
         </ion-item>
 
         <!-- password field -->
         <ion-item class="input-field margin-b-32">
           <ion-label stacked class="font-12 txt-gray margin-b-4">{{'login.passowrd' | translate}}</ion-label>
-          <ion-input type="password" [(ngModel)]="password" class="font-16 txt-yellow"></ion-input>
+          <ion-input type="password" [(ngModel)]="password" class="font-16 txt-yellow" placeholder="{{'general.enter' | translate}}{{'login.passowrd' | translate}}"></ion-input>
         </ion-item>
 
         <!-- login action button -->

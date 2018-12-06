@@ -1,7 +1,28 @@
 {
     "general": {
+        "confirm": "Confirm",
+        "cancel": "Cancel",
+        "toast-close": "Close",
+        "ok": "OK",
+        "next": "Next",
+        "submit": "Submit",
+        "general-error": "System Error, please try again later",
+        "logout-title": "Logout",
+        "logout-msg": "Are you sure, you want to logout?",
+        "connection": "Please check your internet connection",
+        "timeout": "Sorry, we could not excute your request. Please try again",
+        "reference": "Reference",
+        "down": "Sorry, the service is not available now. Please try again later",
+        "done": "Done",
+        "success": "Operation Success",
+        "save": "Save",
+        "delete": "Delete",
+        "enter": "Enter ",
+        "please": "Please ",
+        "edit": "Edit",
+        "add": "Add",
         "title": "Occasion and Co",
-        "info":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the1500s,"
+        "info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the1500s,"
     },
     "login": {
         "login": "Login",
@@ -9,5 +30,17 @@
         "fb": "Facebook Account",
         "email": "Email",
         "passowrd": "Passowrd"
+    },
+    "register": {
+        "title": "Register",
+        "username": "Username",
+        "password": "Password",
+        "re-password": "Re-enter Password",
+        "phone": "Phone Number",
+        "email": "Email",
+        "first": "First Name",
+        "last": "Last Name",
+        "re-password-error": "Password not match",
+        "email-error": "Email not valid"
     }
 }

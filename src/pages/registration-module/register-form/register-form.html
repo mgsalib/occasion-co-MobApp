@@ -1,12 +1,4 @@
-<!-- <ion-header>
-
-  <ion-navbar>
-    <ion-title>register</ion-title>
-  </ion-navbar>
-
-</ion-header> -->
-
-<app-header headerTxt="register">
+<app-header headerTxt="register.title">
 </app-header>
 
 <ion-content class="app-background">
@@ -25,45 +17,45 @@
 
         <!-- username field -->
         <ion-item class="input-field margin-b-8">
-          <ion-label stacked class="font-12 txt-gray margin-b-4">username</ion-label>
-          <ion-input type="text" [(ngModel)]="username" class="font-16 txt-yellow"></ion-input>
+          <ion-label stacked class="font-12 txt-gray margin-b-4">{{'register.username' | translate}}</ion-label>
+          <ion-input type="text" [(ngModel)]="username" class="font-16 txt-yellow" placeholder="{{'general.enter' | translate}}{{'register.username' | translate}}"></ion-input>
         </ion-item>
 
         <!-- password field -->
         <ion-item class="input-field margin-b-8">
-          <ion-label stacked class="font-12 txt-gray margin-b-4">passowrd</ion-label>
-          <ion-input type="passowrd" [(ngModel)]="password" class="font-16 txt-yellow"></ion-input>
+          <ion-label stacked class="font-12 txt-gray margin-b-4">{{'register.password' | translate}}</ion-label>
+          <ion-input type="passowrd" [(ngModel)]="password" class="font-16 txt-yellow" placeholder="{{'general.enter' | translate}}{{'register.password' | translate}}"></ion-input>
         </ion-item>
 
         <!-- renter password field -->
         <ion-item class="input-field margin-b-8">
-          <ion-label stacked class="font-12 txt-gray margin-b-4">renter passowrd</ion-label>
-          <ion-input type="passowrd" [(ngModel)]="rePassword" class="font-16 txt-yellow"></ion-input>
+          <ion-label stacked class="font-12 txt-gray margin-b-4">{{'register.re-password' | translate}}</ion-label>
+          <ion-input type="passowrd" [(ngModel)]="rePassword" class="font-16 txt-yellow" placeholder="{{'general.enter' | translate}}{{'register.re-password' | translate}}"></ion-input>
+        </ion-item>
+
+        <!-- email field -->
+        <ion-item class="input-field margin-b-8">
+          <ion-label stacked class="font-12 txt-gray margin-b-4">{{'register.email' | translate}}</ion-label>
+          <ion-input type="email" [(ngModel)]="email" class="font-16 txt-yellow" placeholder="{{'general.enter' | translate}}{{'register.email' | translate}}"></ion-input>
         </ion-item>
 
         <!-- phone number field -->
         <ion-item class="input-field margin-b-8">
-          <ion-label stacked class="font-12 txt-gray margin-b-4">phone number</ion-label>
-          <ion-input type="tel" [(ngModel)]="phone" class="font-16 txt-yellow"></ion-input>
+          <ion-label stacked class="font-12 txt-gray margin-b-4">{{'register.phone' | translate}}</ion-label>
+          <ion-input type="tel" [(ngModel)]="phone" class="font-16 txt-yellow" placeholder="{{'general.enter' | translate}}{{'register.phone' | translate}}"></ion-input>
         </ion-item>
 
-        <!-- email field -->
+        <ion-item class="input-field margin-b-8">
+          <ion-label stacked class="font-12 txt-gray margin-b-4">{{'register.first' | translate}}</ion-label>
+          <ion-input type="text" [(ngModel)]="firstname" class="font-16 txt-yellow" placeholder="{{'general.enter' | translate}}{{'register.first' | translate}}"></ion-input>
+        </ion-item>
+
         <ion-item class="input-field margin-b-32">
-          <ion-label stacked class="font-12 txt-gray margin-b-4">email</ion-label>
-          <ion-input type="email" [(ngModel)]="email" class="font-16 txt-yellow"></ion-input>
-        </ion-item>
-
-        <ion-item class="input-field margin-b-8">
-          <ion-label stacked class="font-12 txt-gray margin-b-4">First Name</ion-label>
-          <ion-input type="text" [(ngModel)]="firstname" class="font-16 txt-yellow"></ion-input>
-        </ion-item>
-
-        <ion-item class="input-field margin-b-8">
-          <ion-label stacked class="font-12 txt-gray margin-b-4">Last Name</ion-label>
-          <ion-input type="text" [(ngModel)]="lastname" class="font-16 txt-yellow"></ion-input>
+          <ion-label stacked class="font-12 txt-gray margin-b-4">{{'register.last' | translate}}</ion-label>
+          <ion-input type="text" [(ngModel)]="lastname" class="font-16 txt-yellow" placeholder="{{'general.enter' | translate}}{{'register.last' | translate}}"></ion-input>
         </ion-item>
         <!-- login action button -->
-        <button class="button-field font-16 bg-yellow padding-h-16 txt-primary" (click)="register()">register</button>
+        <button class="button-field font-16 bg-yellow padding-h-16 txt-primary" (click)="register()">{{'register.title' | translate}}</button>
       </ion-col>
     </ion-row>
 

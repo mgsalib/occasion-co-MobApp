@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HttpBaseProvider, GlobalProvider } from "../../../providers/providers";
+import { HttpBaseProvider, GlobalProvider, AlertProvider } from "../../../providers/providers";
 
 /**
  * Generated class for the RegisterFormPage page.
@@ -25,7 +25,7 @@ export class RegisterFormPage {
   lastname: string = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private httpCall: HttpBaseProvider, private globals: GlobalProvider) {
+    private httpCall: HttpBaseProvider, private globals: GlobalProvider, private alert: AlertProvider) {
   }
 
   ionViewDidLoad() {
@@ -37,18 +37,47 @@ export class RegisterFormPage {
   }
 
   register() {
-    var data = {
-      UserName: this.username,
-      Password: this.password,
-      Email: this.email,
-      FirstName: this.firstname,
-      LastName: this.lastname,
-      Phone: this.phone
-    };
-    this.httpCall.post(this.globals.servicesURL.register, data).subscribe(result => {
-      debugger
-    });
-
+    if (this.validateInputs()) {
+      var data = {
+        UserName: this.username,
+        Password: this.password,
+        Email: this.email,
+        FirstName: this.firstname,
+        LastName: this.lastname,
+        Phone: this.phone
+      };
+      this.httpCall.post(this.globals.servicesURL.register, data).subscribe(result => {
+        debugger
+      });
+    }
   }
 
+  validateInputs() {
+    if (this.username == '') {
+      this.alert.displayErrorToast2("general.please", "general.enter", "register.username");
+      return false;
+    }
+    else if (this.password == '') {
+      this.alert.displayErrorToast2("general.please", "general.enter", "register.password");
+      return false;
+    }
+    else if (this.rePassword == '') {
+      this.alert.displayErrorToast2("general.please", "general.enter", "register.re-password");
+      return false;
+    }
+    else if (this.password != this.rePassword) {
+      this.alert.displayErrorToast("register.re-password-error");
+      return false;
+    }
+    else if (this.email == '') {
+      this.alert.displayErrorToast2("general.please", "general.enter", "register.email");
+      return false;
+    }
+    else if (!this.globals.validateEmail(this.email)) {
+      this.alert.displayErrorToast("register.email-error");
+      return false;
+    }
+
+    return true;
+  }
 }

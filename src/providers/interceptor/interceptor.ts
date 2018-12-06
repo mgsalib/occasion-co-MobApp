@@ -11,16 +11,12 @@ import {
   HttpParams
 } from '@angular/common/http';
 import { AlertProvider } from "../alert/alert";
-import { Events } from 'ionic-angular';
-import { TranslateService } from '@ngx-translate/core';
 import { GlobalProvider } from "../global/global";
 
 @Injectable()
 export class InterceptorProvider implements HttpInterceptor {
 
-  constructor(private alert: AlertProvider,
-    private events: Events,
-    private translateService: TranslateService, private globals: GlobalProvider) { }
+  constructor(private alert: AlertProvider, private globals: GlobalProvider) { }
 
   callsArr: any = [];
   paramsArr: HttpParams;
@@ -30,7 +26,7 @@ export class InterceptorProvider implements HttpInterceptor {
 
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json');
-    
+
     if (this.globals.accessToken != "") {
       headers = headers.set('Authorization', 'Bearer ' + this.globals.accessToken);
     }

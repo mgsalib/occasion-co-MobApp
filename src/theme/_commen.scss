@@ -355,4 +355,5 @@
 ::placeholder {
   color: map-get($colors, txt-gray);
   text-transform: capitalize;
+  opacity: .4;
 }

@@ -6,7 +6,7 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { HttpBaseProvider, InterceptorProvider, AlertProvider, GlobalProvider } from '../providers/providers';
+import { HttpBaseProvider, InterceptorProvider, AlertProvider, GlobalProvider, TranslateProvider } from '../providers/providers';
 import { IonicStorageModule } from '@ionic/storage';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
@@ -54,7 +54,8 @@ export function createTranslateLoader(http: HttpClient) {
       multi: true
     },
     AlertProvider,
-    GlobalProvider
+    GlobalProvider,
+    TranslateProvider
   ]
 })
 export class AppModule { }
