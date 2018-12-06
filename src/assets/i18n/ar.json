@@ -30,4 +30,16 @@
         "email": "Email",
         "passowrd": "Passowrd"
     },
+    "register": {
+        "title": "Register",
+        "username": "Username",
+        "password": "Password",
+        "re-password": "Re-enter Password",
+        "phone": "Phone Number",
+        "email": "Email",
+        "first": "First Name",
+        "last": "Last Name",
+        "re-password-error": "Password not match",
+        "email-error": "Email not valid"
+    }
 }
