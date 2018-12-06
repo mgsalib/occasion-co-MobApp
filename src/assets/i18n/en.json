@@ -24,13 +24,17 @@
         "title": "Occasion and Co",
         "info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the1500s,"
     },
+    
     "login": {
         "login": "Login",
         "new-account": "New Account",
         "fb": "Facebook Account",
         "email": "Email",
-        "passowrd": "Passowrd"
+        "passowrd": "Passowrd",
+        "remember-me": "remember username",
+        "forget-password": "forget password"
     },
+    
     "register": {
         "title": "Register",
         "username": "Username",
@@ -42,5 +46,9 @@
         "last": "Last Name",
         "re-password-error": "Password not match",
         "email-error": "Email not valid"
+    },
+
+    "forget": {
+        "message": "enter your email address to change your password"
     }
 }

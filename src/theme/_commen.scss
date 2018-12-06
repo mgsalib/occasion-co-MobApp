@@ -120,43 +120,53 @@
 }
 
 .margin-h-2 {
-  margin: 0px 2px !important;
+  margin-right: 2px !important;
+  margin-left: 2px !important;
 }
 
 .margin-h-4 {
-  margin: 0px 4px !important;
+  margin-right: 4px !important;
+  margin-left: 4px !important;
 }
 
 .margin-h-8 {
-  margin: 0px 8px !important;
+  margin-right: 8px !important;
+  margin-left: 8px !important;
 }
 
 .margin-h-16 {
-  margin: 0px 16px !important;
+  margin-right: 16px !important;
+  margin-left: 16px !important;
 }
 
 .margin-h-32 {
-  margin: 0px 32px !important;
+  margin-right: 32px !important;
+  margin-left: 32px !important;
 }
 
 .margin-v-2 {
-  margin: 2px 0px !important;
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
 }
 
 .margin-v-4 {
-  margin: 4px 0px !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
 }
 
 .margin-v-8 {
-  margin: 8px 0px !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
 }
 
 .margin-v-16 {
-  margin: 16px 0px !important;
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
 }
 
 .margin-v-32 {
-  margin: 32px 0px !important;
+  margin-top: 32px !important;
+  margin-bottom: 32px !important;
 }
 
 // padding classes ==============================
@@ -281,43 +291,53 @@
 }
 
 .padding-h-2 {
-  padding: 0px 2px !important;
+  padding-right: 2px !important;
+  padding-left: 2px !important;
 }
 
 .padding-h-4 {
-  padding: 0px 4px !important;
+  padding-right: 4px !important;
+  padding-left: 4px !important;
 }
 
 .padding-h-8 {
-  padding: 0px 8px !important;
+  padding-right: 8px !important;
+  padding-left: 8px !important;
 }
 
 .padding-h-16 {
-  padding: 0px 16px !important;
+  padding-right: 16px !important;
+  padding-left: 16px !important;
 }
 
 .padding-h-32 {
-  padding: 0px 32px !important;
+  padding-right: 32px !important;
+  padding-left: 32px !important;
 }
 
 .padding-v-2 {
-  padding: 2px 0px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
 }
 
 .padding-v-4 {
-  padding: 4px 0px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
 }
 
 .padding-v-8 {
-  padding: 8px 0px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
 }
 
 .padding-v-16 {
-  padding: 16px 0px !important;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
 }
 
 .padding-v-32 {
-  padding: 32px 0px !important;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
 }
 
 // Inputs ==============================
@@ -356,4 +376,12 @@
   color: map-get($colors, txt-gray);
   text-transform: capitalize;
   opacity: .4;
+}
+
+.input-checkbox {
+  background-color: transparent !important;
+
+  .item-inner {
+    border-bottom: 0px !important;
+  }
 }

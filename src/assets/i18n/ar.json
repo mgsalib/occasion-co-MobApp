@@ -28,7 +28,9 @@
         "new-account": "New Account",
         "fb": "Facebook Account",
         "email": "Email",
-        "passowrd": "Passowrd"
+        "passowrd": "Passowrd",
+        "remember-me": "تذكر اسم المستخدم",
+        "forget-password": "نسيت كلمة المرور"
     },
     "register": {
         "title": "Register",
@@ -41,5 +43,9 @@
         "last": "Last Name",
         "re-password-error": "Password not match",
         "email-error": "Email not valid"
+    },
+
+    "forget": {
+      "message": "أدخل بريدك الإلكتروني لتغيير كلمة المرور الخاصة بك"
     }
 }
