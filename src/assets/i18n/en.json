@@ -1,0 +1,13 @@
+{
+    "general": {
+        "title": "Occasion and Co",
+        "info":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the1500s,"
+    },
+    "login": {
+        "login": "Login",
+        "new-account": "New Account",
+        "fb": "Facebook Account",
+        "email": "Email",
+        "passowrd": "Passowrd"
+    }
+}

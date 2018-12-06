@@ -6,10 +6,10 @@
     <ion-row class="about-content">
       <ion-col col-12 class="padding-0">
         <img class="margin-b-8" />
-        <h3 class="margin-b-8 font-16 bold-txt txt-white">Occasion and Co</h3>
+        <h3 class="margin-b-8 font-16 bold-txt txt-white">{{'general.title' | translate}}</h3>
         <p class="margin-b-16 margin-t-0 font-12 txt-gray">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry’s standard dummy text ever since the 1500s,</p>
+          {{'general.info' | translate}}  
+        </p>
       </ion-col>
     </ion-row>
 
@@ -19,31 +19,32 @@
 
         <!-- username field -->
         <ion-item class="input-field margin-b-8">
-          <ion-label stacked class="font-12 txt-gray margin-b-4">username</ion-label>
-          <ion-input type="text" class="font-16 txt-yellow"></ion-input>
+          <ion-label stacked class="font-12 txt-gray margin-b-4">{{'login.email' | translate}}</ion-label>
+          <ion-input type="text" [(ngModel)]="email" class="font-16 txt-yellow"></ion-input>
         </ion-item>
 
         <!-- password field -->
         <ion-item class="input-field margin-b-32">
-          <ion-label stacked class="font-12 txt-gray margin-b-4">passowrd</ion-label>
-          <ion-input type="passowrd" class="font-16 txt-yellow"></ion-input>
+          <ion-label stacked class="font-12 txt-gray margin-b-4">{{'login.passowrd' | translate}}</ion-label>
+          <ion-input type="password" [(ngModel)]="password" class="font-16 txt-yellow"></ion-input>
         </ion-item>
 
         <!-- login action button -->
-        <button class="button-field font-16 bg-yellow padding-h-16 txt-primary">login</button>
+        <button class="button-field font-16 bg-yellow padding-h-16 txt-primary">{{'login.login' | translate}}</button>
       </ion-col>
     </ion-row>
 
     <!-- registration buttons -->
     <ion-row>
       <ion-col col-12 class="padding-0">
-        <button (click)="openRegister()" class="button-field font-16 bg-white padding-h-16 margin-b-8 txt-primary">new
-          account</button>
-        <button class="button-field font-16 bg-facebook padding-h-16 txt-white">facebook account</button>
+        <button (click)="openRegister()" class="button-field font-16 bg-white padding-h-16 margin-b-8 txt-primary">
+          {{'login.new-account' | translate}}
+        </button>
+        <button class="button-field font-16 bg-facebook padding-h-16 txt-white">
+        {{'login.fb' | translate}}
+        </button>
       </ion-col>
     </ion-row>
   </ion-grid>
-
-
 
 </ion-content>
