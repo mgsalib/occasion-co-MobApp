@@ -18,9 +18,9 @@ export class GlobalProvider {
     login: {
       url: "User/AuthenticateUser"
     },
-    products:
+    register:
     {
-      url: "product-management"
+      url: "User/Add"
     }
   }
   constructor()

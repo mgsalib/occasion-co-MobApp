@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 /**
  * Generated class for the AppHeaderComponent component.
@@ -12,11 +12,9 @@ import { Component } from '@angular/core';
 })
 export class AppHeaderComponent {
 
-  text: string;
+  @Input() headerTxt: string = "";
 
   constructor() {
-    console.log('Hello AppHeaderComponent Component');
-    this.text = 'Hello World';
   }
 
 }

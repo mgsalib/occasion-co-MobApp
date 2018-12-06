@@ -6,6 +6,8 @@
 
 </ion-header> -->
 
+<app-header headerTxt="register">
+</app-header>
 
 <ion-content class="app-background">
   <ion-grid class="padding-16 padding-t-0">
@@ -13,7 +15,7 @@
     <!-- upload user image  -->
     <ion-row class="margin-v-16">
       <ion-col text-center class="padding-0">
-        <img src="../../assets/imgs/user-image.svg" height="64px" />
+        <img src="assets/imgs/user-image.svg" height="64px" />
       </ion-col>
     </ion-row>
 
@@ -24,35 +26,44 @@
         <!-- username field -->
         <ion-item class="input-field margin-b-8">
           <ion-label stacked class="font-12 txt-gray margin-b-4">username</ion-label>
-          <ion-input type="text" class="font-16 txt-yellow"></ion-input>
+          <ion-input type="text" [(ngModel)]="username" class="font-16 txt-yellow"></ion-input>
         </ion-item>
 
         <!-- password field -->
         <ion-item class="input-field margin-b-8">
           <ion-label stacked class="font-12 txt-gray margin-b-4">passowrd</ion-label>
-          <ion-input type="passowrd" class="font-16 txt-yellow"></ion-input>
+          <ion-input type="passowrd" [(ngModel)]="password" class="font-16 txt-yellow"></ion-input>
         </ion-item>
 
         <!-- renter password field -->
         <ion-item class="input-field margin-b-8">
           <ion-label stacked class="font-12 txt-gray margin-b-4">renter passowrd</ion-label>
-          <ion-input type="passowrd" class="font-16 txt-yellow"></ion-input>
+          <ion-input type="passowrd" [(ngModel)]="rePassword" class="font-16 txt-yellow"></ion-input>
         </ion-item>
 
         <!-- phone number field -->
         <ion-item class="input-field margin-b-8">
           <ion-label stacked class="font-12 txt-gray margin-b-4">phone number</ion-label>
-          <ion-input type="passowrd" class="font-16 txt-yellow"></ion-input>
+          <ion-input type="tel" [(ngModel)]="phone" class="font-16 txt-yellow"></ion-input>
         </ion-item>
 
         <!-- email field -->
         <ion-item class="input-field margin-b-32">
           <ion-label stacked class="font-12 txt-gray margin-b-4">email</ion-label>
-          <ion-input type="email" class="font-16 txt-yellow"></ion-input>
+          <ion-input type="email" [(ngModel)]="email" class="font-16 txt-yellow"></ion-input>
         </ion-item>
 
+        <ion-item class="input-field margin-b-8">
+          <ion-label stacked class="font-12 txt-gray margin-b-4">First Name</ion-label>
+          <ion-input type="text" [(ngModel)]="firstname" class="font-16 txt-yellow"></ion-input>
+        </ion-item>
+
+        <ion-item class="input-field margin-b-8">
+          <ion-label stacked class="font-12 txt-gray margin-b-4">Last Name</ion-label>
+          <ion-input type="text" [(ngModel)]="lastname" class="font-16 txt-yellow"></ion-input>
+        </ion-item>
         <!-- login action button -->
-        <button class="button-field font-16 bg-yellow padding-h-16 txt-primary" (click)="openConfirmRegister()">register</button>
+        <button class="button-field font-16 bg-yellow padding-h-16 txt-primary" (click)="register()">register</button>
       </ion-col>
     </ion-row>
 
