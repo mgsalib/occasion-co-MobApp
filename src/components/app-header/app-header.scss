@@ -1,3 +1,11 @@
 app-header {
+  .toolbar-background {
+    background-color: map-get($colors, primary);
+    border-bottom: 0px !important;
+  }
 
+  .back-button,
+  .toolbar-title {
+    color: map-get($colors, yellow);
+  }
 }
