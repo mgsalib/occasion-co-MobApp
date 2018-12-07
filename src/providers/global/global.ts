@@ -20,7 +20,7 @@ export class GlobalProvider {
     },
     register:
     {
-      url: "User/Add"
+      url: "User/Add?"
     }
   }
   constructor()

@@ -385,3 +385,11 @@
     border-bottom: 0px !important;
   }
 }
+
+.errorToastClass
+{
+   .toast-wrapper
+    {
+        background: color($colors, red) !important;
+    }
+}
