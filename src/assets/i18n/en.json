@@ -49,6 +49,8 @@
     "forget": {
         "title": "Forget Password",
         "message": "enter your email address to change your password",
-        "reset": "Reset Password"
+        "reset": "Reset Password",
+        "succ": "Your password has been sent to your registered email",
+        "error": "Email not valid, please enter valid email"
     }
 }

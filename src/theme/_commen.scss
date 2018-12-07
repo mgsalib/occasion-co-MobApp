@@ -393,3 +393,11 @@
         background: color($colors, red) !important;
     }
 }
+
+.success-toast
+{
+    .toast-wrapper
+    {
+        background: color($colors, green) !important;
+    }
+}

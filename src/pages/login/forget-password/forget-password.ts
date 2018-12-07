@@ -18,7 +18,7 @@ export class ForgetPasswordPage {
 
   email: string = "";
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private alert: AlertProvider, private globals: GlobalProvider) {
+    private alert: AlertProvider, private httpCall: HttpBaseProvider, private globals: GlobalProvider) {
   }
 
   ionViewDidLoad() {
@@ -34,7 +34,16 @@ export class ForgetPasswordPage {
       this.alert.displayErrorToast("register.email-error");
       return false;
     }
-    else
-    { }
+    else {
+      this.httpCall.get(this.globals.servicesURL.forgetPassword, "?UserEmail=" + this.email).subscribe(result => {
+        if (result == true) {
+          this.alert.displayToast("forget.succ");
+          this.navCtrl.pop();
+        }
+        else {
+          this.alert.displayErrorToast("forget.error");
+        }
+      });
+    }
   }
 }

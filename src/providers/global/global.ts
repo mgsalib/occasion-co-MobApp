@@ -21,6 +21,9 @@ export class GlobalProvider {
     register:
     {
       url: "User/Add?"
+    },
+    forgetPassword: {
+      url: "User/ForgetPassword"
     }
   }
   constructor()

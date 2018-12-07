@@ -231,6 +231,18 @@ export class AlertProvider {
             );
         });
     }
+    displayToast(msg) {
+        this.translateService.get([msg]).subscribe(
+            value => {
+                this.toast = this.toastCtrl.create({
+                    message: value[msg],
+                    duration: 2500,
+                    position: "top",
+                    cssClass: "success-toast"
+                });
+                this.toast.present();
+            });
+    }
 }
 
 @Injectable()
