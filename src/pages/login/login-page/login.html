@@ -38,7 +38,7 @@
         <!-- remember me checkbox -->
         <ion-item class="input-checkbox padding-0 margin-b-8">
           <ion-label text-capitalize class="txt-gray">{{'login.remember-me' | translate}}</ion-label>
-          <ion-checkbox color="yellow" checked="true"></ion-checkbox>
+          <ion-checkbox color="yellow" [(ngModel)]="rememberMe" (ionChange)="rememberMeChanged()"></ion-checkbox>
         </ion-item>
 
         <!-- login action button -->

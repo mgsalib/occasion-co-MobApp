@@ -26,7 +26,8 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp, {
-      backButtonText: ''
+      backButtonText: '',
+      mode: "ios"
     }),
     IonicStorageModule.forRoot(),
     HttpClientModule,

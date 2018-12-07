@@ -23,6 +23,7 @@ export class RegisterFormPage {
   email: string = "";
   firstname: string = "";
   lastname: string = "";
+  mobile: string = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private httpCall: HttpBaseProvider, private globals: GlobalProvider, private alert: AlertProvider) {
@@ -44,7 +45,8 @@ export class RegisterFormPage {
         Email: this.email,
         FirstName: this.firstname,
         LastName: this.lastname,
-        Phone: this.phone
+        Phone: this.phone,
+        Mobile: this.mobile
       };
       this.httpCall.post(this.globals.servicesURL.register, data).subscribe(result => {
         debugger
@@ -77,7 +79,10 @@ export class RegisterFormPage {
       this.alert.displayErrorToast("register.email-error");
       return false;
     }
-
+    else if (this.mobile == '') {
+      this.alert.displayErrorToast2("general.please", "general.enter", "register.mobile");
+      return false;
+    }
     return true;
   }
 }

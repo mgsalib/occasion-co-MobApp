@@ -24,28 +24,30 @@
         "info": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the1500s,"
     },
     "login": {
-        "login": "Login",
-        "new-account": "New Account",
-        "fb": "Facebook Account",
-        "email": "Email",
-        "passowrd": "Passowrd",
+        "login": "تسجيل الدخول",
+        "new-account": "حساب جديد",
+        "fb": "حساب الفيسبوك",
+        "email": "البريد الإلكتروني",
+        "passowrd": "كلمه السر",
         "remember-me": "تذكر اسم المستخدم",
         "forget-password": "نسيت كلمة المرور"
     },
     "register": {
-        "title": "Register",
-        "username": "Username",
-        "password": "Password",
-        "re-password": "Re-enter Password",
-        "phone": "Phone Number",
-        "email": "Email",
-        "first": "First Name",
-        "last": "Last Name",
-        "re-password-error": "Password not match",
-        "email-error": "Email not valid"
+        "title": "تسجيل",
+        "username": "اسم المستخدم",
+        "password": "كلمه السر",
+        "re-password": "اعادة ادخال كلمة السر",
+        "phone": "رقم الهاتف",
+        "email": "البريد الإلكتروني",
+        "first": "الاسم الاول",
+        "last": "الاسم الاحير",
+        "re-password-error": "كلمة السر ليست جيدة",
+        "email-error": "البريد الإلكتروني غير صالح",
+        "mobile": "التليفون المحمول"
     },
-
     "forget": {
-      "message": "أدخل بريدك الإلكتروني لتغيير كلمة المرور الخاصة بك"
+        "title": "نسيت كلمة المرور",
+        "message": "أدخل بريدك الإلكتروني لتغيير كلمة المرور الخاصة بك",
+        "reset": "إعادة ضبط كلمة المرور"
     }
 }

@@ -18,8 +18,8 @@ import { Storage } from '@ionic/storage';
 export class LoginPage {
 
   rememberMe: boolean = false;
-  email: string = "systemadmin@kmk.com";
-  password: string = "systemadmin";
+  email: string = "";
+  password: string = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private httpCall: HttpBaseProvider, private globals: GlobalProvider,
@@ -36,7 +36,6 @@ export class LoginPage {
             this.storage.get("password").then(pass => {
               if (pass) {
                 this.password = pass;
-                this.rememberMe = true;
               }
             });
           }
