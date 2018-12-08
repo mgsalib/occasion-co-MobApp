@@ -1,1 +1,25 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<!-- [enabled]="globals.isUserLoggedIn"  -->
+<ion-menu [content]="content" type="overlay" [swipeEnabled]="globals.isUserLoggedIn" [enabled]="globals.isUserLoggedIn">
+  <ion-content class="no-margin-content menu-content">
+    <ion-buttons right>
+      <button ion-button icon-only menuClose clear>
+        <ion-icon name="ios-close-circle-outline" color="light"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-list no-lines>
+      <ng-container *ngFor="let p of pages">
+        <button no-padding no-margin text-center menuClose ion-item color="light" (click)="openPage(p)" *ngIf="p.tab == globals.activeTab">
+        {{p.title | translate}}
+      </button>
+      </ng-container>
+    </ion-list>
+    <button ion-button clear block menuClose (click)="logout()">
+        <ion-icon name="md-log-out" color="danger"></ion-icon>
+        <span color="light" ion-text text-uppercase margin> Logout </span>
+    </button>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

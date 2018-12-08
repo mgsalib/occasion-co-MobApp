@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class GlobalProvider {
 
-  public isUserLoggedIn: boolean = true;
+  public isUserLoggedIn: boolean = false;
   public accessToken: string = "";
   public userId: string = "";
 

@@ -62,7 +62,7 @@ export class LoginPage {
         this.globals.isUserLoggedIn = true;
         this.globals.userId = result;
         this.rememberMeChanged();
-        this.navCtrl.setRoot("HomePage");
+        this.navCtrl.setRoot("LandingPage");
       });
     }
   }
