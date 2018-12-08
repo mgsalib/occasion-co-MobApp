@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HttpBaseProvider, GlobalProvider } from "../../../providers/providers";
+import { HttpBaseProvider, GlobalProvider, AlertProvider } from "../../../providers/providers";
 import { Storage } from '@ionic/storage';
 
 /**
@@ -23,7 +23,7 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private httpCall: HttpBaseProvider, private globals: GlobalProvider,
-    private storage: Storage) {
+    private storage: Storage, private alert: AlertProvider) {
   }
 
   ionViewDidLoad() {
@@ -57,14 +57,14 @@ export class LoginPage {
   }
 
   doLogin() {
-    this.httpCall.get(this.globals.servicesURL.login, "?Email=" + this.email + "&Password=" + this.password).subscribe(result => {
-      if (result.success) {
+    if (this.validateInputs()) {
+      this.httpCall.get(this.globals.servicesURL.login, "?Email=" + this.email + "&Password=" + this.password).subscribe(result => {
         this.globals.isUserLoggedIn = true;
-        this.globals.accessToken = result.data.token;
+        this.globals.userId = result;
         this.rememberMeChanged();
         this.navCtrl.setRoot("HomePage");
-      }
-    });
+      });
+    }
   }
 
   forgetPassword() {
@@ -73,5 +73,22 @@ export class LoginPage {
 
   openRegister() {
     this.navCtrl.push("RegisterFormPage");
+  }
+
+  validateInputs() {
+    if (this.email == '') {
+      this.alert.displayErrorToast2("general.please", "general.enter", "register.email");
+      return false;
+    }
+    else if (!this.globals.validateEmail(this.email)) {
+      this.alert.displayErrorToast("register.email-error");
+      return false;
+    }
+    else if (this.password == '') {
+      this.alert.displayErrorToast2("general.please", "general.enter", "register.password");
+      return false;
+    }
+
+    return true;
   }
 }

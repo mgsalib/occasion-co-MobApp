@@ -64,6 +64,8 @@ export class InterceptorProvider implements HttpInterceptor {
         if (this.callsArr.length == 0) {
           this.alert.dismissLoadingSpinner();
         }
+
+        this.alert.displayErrorToast(err.error);
       }
     });
   }

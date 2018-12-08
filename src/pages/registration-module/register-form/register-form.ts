@@ -41,7 +41,8 @@ export class RegisterFormPage {
     if (this.validateInputs()) {
       var data = "UserName=" + this.username + "&Password=" + this.password + "&Email=" + this.email + "&FirstName=" + this.firstname + "&LastName=" + this.lastname + "&Phone=" + this.phone + "&Mobile=" + this.mobile;
       this.httpCall.post(this.globals.servicesURL.register, "", data).subscribe(result => {
-        this.alert.displayErrorToast(result);
+        this.globals.userId = result;
+        this.navCtrl.push("HomePage");
       });
     }
   }
