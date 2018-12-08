@@ -9,10 +9,9 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class GlobalProvider {
 
-  // public isUserLoggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   public isUserLoggedIn: boolean = true;
   public accessToken: string = "";
-  public activeTab: string = "workspace";
+  public userId: string = "";
 
   public servicesURL: any = {
     login: {
