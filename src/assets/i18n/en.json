@@ -52,5 +52,9 @@
         "reset": "Reset Password",
         "succ": "Your password has been sent to your registered email",
         "error": "Email not valid, please enter valid email"
+    },
+
+    "landing": {
+        "title": "Welcome!"
     }
 }

@@ -355,12 +355,16 @@
       text-transform: capitalize;
     }
   }
-}
 
-.input-field {
   .text-input[disabled] {
     text-transform: capitalize;
     opacity: 1;
+  }
+
+  ::placeholder {
+    color: map-get($colors, txt-gray);
+    text-transform: capitalize;
+    opacity: .4;
   }
 }
 
@@ -372,12 +376,6 @@
   text-transform: capitalize;
 }
 
-::placeholder {
-  color: map-get($colors, txt-gray);
-  text-transform: capitalize;
-  opacity: .4;
-}
-
 .input-checkbox {
   background-color: transparent !important;
 
@@ -386,18 +384,39 @@
   }
 }
 
-.errorToastClass
-{
-   .toast-wrapper
-    {
-        background: color($colors, red) !important;
-    }
+.searchbar {
+  border: 0px !important;
+  background-color: map-get($colors, primary) !important;
+
+  .searchbar-search-icon {
+    background-image: url(../assets/imgs/icon-magnifying-glass.svg) !important;
+  }
+
+  .searchbar-input {
+    border-radius: 3px !important;
+    background-color: rgba(map-get($colors, white), 0.1) !important;
+    color: map-get($colors, gray) !important;
+  }
+
+  ::placeholder {
+    color: map-get($colors, gray) !important;
+  }
 }
 
-.success-toast
-{
-    .toast-wrapper
-    {
-        background: color($colors, green) !important;
-    }
+// toasts classes ==============================
+.errorToastClass {
+  .toast-wrapper {
+    background: color($colors, red) !important;
+  }
+}
+
+.success-toast {
+  .toast-wrapper {
+    background: color($colors, green) !important;
+  }
+}
+
+// disabled class ==============================
+.display-hidden {
+  display: none;
 }
