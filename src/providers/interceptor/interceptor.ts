@@ -27,9 +27,9 @@ export class InterceptorProvider implements HttpInterceptor {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json');
 
-    if (this.globals.accessToken != "") {
-      headers = headers.set('Authorization', 'Bearer ' + this.globals.accessToken);
-    }
+    // if (this.globals.accessToken != "") {
+    //   headers = headers.set('Authorization', 'Bearer ' + this.globals.accessToken);
+    // }
 
     this.paramsArr = req.params;
 

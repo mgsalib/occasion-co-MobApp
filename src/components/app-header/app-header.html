@@ -1,6 +1,6 @@
 <ion-header no-border>
   <ion-navbar class="main-header">
-    <ion-buttons start *ngIf="globals.isUserLoggedIn">
+    <ion-buttons start>
       <button ion-button icon-only (click)="toggleMenu()">
           <ion-icon name="menu" color="yellow"></ion-icon>
       </button>
@@ -8,13 +8,13 @@
     <ion-title *ngIf="headerTxt" class="main-title">
       {{headerTxt | translate}}
     </ion-title>
-    <ion-buttons end *ngIf="globals.isUserLoggedIn">
-      <button ion-button icon-only (click)="home()">
+    <ion-buttons end>
+      <button ion-button icon-only (click)="home()" *ngIf="showHome">
           <ion-icon name="home" color="yellow"></ion-icon>
       </button>
-      <button ion-button icon-only (click)="cart()">
+      <button ion-button icon-only (click)="cart()" *ngIf="showCart">
             <ion-icon name="cart" color="yellow"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
-</ion-header> 
+</ion-header>

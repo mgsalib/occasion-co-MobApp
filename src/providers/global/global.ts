@@ -23,6 +23,9 @@ export class GlobalProvider {
     },
     forgetPassword: {
       url: "User/ForgetPassword"
+    },
+    products:{
+      url:"Product/Get"
     }
   }
   constructor()

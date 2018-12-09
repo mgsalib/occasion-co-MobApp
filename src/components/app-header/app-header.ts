@@ -15,11 +15,13 @@ import { MenuController, NavController } from 'ionic-angular';
 export class AppHeaderComponent {
 
   @Input() headerTxt: string = "";
-
+  @Input() showHome: boolean = false;
+  @Input() showCart: boolean = false;
+  
   constructor(private globals: GlobalProvider, private menu: MenuController, private navCtrl: NavController) {
   }
 
-    toggleMenu() {
+  toggleMenu() {
     this.menu.toggle();
   }
 
@@ -27,7 +29,12 @@ export class AppHeaderComponent {
     this.navCtrl.setRoot("HomePage");
   }
 
-  cart()
-  {}
+  cart() {
+    if (this.globals.isUserLoggedIn == true)
+    { }
+    else {
+      this.navCtrl.push("LoginPage", { fromCart: true });
+    }
+  }
 
 }

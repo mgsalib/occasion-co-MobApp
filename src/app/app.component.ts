@@ -11,7 +11,7 @@ import { AlertProvider, GlobalProvider } from "../providers/providers";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = "LoginPage";
+  rootPage: any = "LandingPage";
   lastSelectedPage: string = "";
 
   pages: Array<{ title: string, component: any }>;
@@ -22,7 +22,7 @@ export class MyApp {
     this.initializeApp();
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'landing.title', component: "LandingPage" }
+      { title: 'login.login', component: "LoginPage" }
     ];
   }
 
