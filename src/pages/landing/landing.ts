@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HttpBaseProvider, GlobalProvider } from "../../providers/providers";
 
 /**
  * Generated class for the LandingPage page.
@@ -15,11 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LandingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private httpCall: HttpBaseProvider, private globals: GlobalProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LandingPage');
+    this.httpCall.get(this.globals.servicesURL.products).subscribe(result => {
+      debugger
+    });
   }
 
 }

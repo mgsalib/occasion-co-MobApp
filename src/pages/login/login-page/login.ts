@@ -20,10 +20,14 @@ export class LoginPage {
   rememberMe: boolean = false;
   email: string = "";
   password: string = "";
+  fromCart: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private httpCall: HttpBaseProvider, private globals: GlobalProvider,
     private storage: Storage, private alert: AlertProvider) {
+    if (this.navParams.data.fromCart) {
+      this.fromCart = this.navParams.data.fromCart;
+    }
   }
 
   ionViewDidLoad() {
@@ -62,7 +66,12 @@ export class LoginPage {
         this.globals.isUserLoggedIn = true;
         this.globals.userId = result;
         this.rememberMeChanged();
-        this.navCtrl.setRoot("LandingPage");
+        if (this.fromCart) {
+          this.navCtrl.pop();
+        }
+        else {
+          this.navCtrl.setRoot("LandingPage");
+        }
       });
     }
   }

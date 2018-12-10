@@ -57,6 +57,15 @@
     </ion-list>
 
     <!-- <ion-list no-lines>
+<!-- [enabled]="globals.isUserLoggedIn"  -->
+<ion-menu [content]="content" type="overlay">
+  <ion-content class="no-margin-content menu-content">
+    <ion-buttons right>
+      <button ion-button icon-only menuClose clear>
+        <ion-icon name="ios-close-circle-outline" color="light"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-list no-lines>
       <ng-container *ngFor="let p of pages">
         <button no-padding no-margin text-center menuClose ion-item color="light" (click)="openPage(p)" *ngIf="p.tab == globals.activeTab">
           {{p.title | translate}}
