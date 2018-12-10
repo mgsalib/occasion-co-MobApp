@@ -1,20 +1,25 @@
 <ion-header no-border>
   <ion-navbar class="main-header">
+    <!-- left hand side icons -->
     <ion-buttons start *ngIf="globals.isUserLoggedIn">
       <button ion-button icon-only (click)="toggleMenu()">
-          <ion-icon name="menu" color="yellow"></ion-icon>
+        <ion-icon name="menu" color="yellow"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title *ngIf="headerTxt" class="main-title">
+
+    <!-- page title -->
+    <ion-title text-capitalize *ngIf="headerTxt" class="main-title">
       {{headerTxt | translate}}
     </ion-title>
+
+    <!-- right hand side icons -->
     <ion-buttons end *ngIf="globals.isUserLoggedIn">
       <button ion-button icon-only (click)="home()">
-          <ion-icon name="home" color="yellow"></ion-icon>
+        <ion-icon name="home" color="yellow"></ion-icon>
       </button>
       <button ion-button icon-only (click)="cart()">
-            <ion-icon name="cart" color="yellow"></ion-icon>
+        <ion-icon name="cart" color="yellow"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
-</ion-header> 
+</ion-header>

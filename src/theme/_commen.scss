@@ -420,3 +420,89 @@
 .display-hidden {
   display: none;
 }
+
+// slide menu ==============================
+.main-slide-menu {
+  .user-widget {
+    width: calc(100% - 16px);
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid map-get($colors, yellow);
+
+    >span:nth-child(1),
+    span:nth-child(3) {
+      order: 0;
+      flex: 0 1 auto;
+      align-self: auto;
+    }
+
+    >span:nth-child(1) {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: block;
+      overflow: hidden;
+
+      >img {
+        width: auto;
+        height: 64px;
+      }
+    }
+
+    >span:nth-child(2) {
+      width: calc(100% - 133px);
+      order: 0;
+      flex: 1 1 auto;
+      align-self: auto;
+
+      >p {
+        margin-top: 10px;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-transform: capitalize;
+      }
+
+      >button {
+        width: 100%;
+        height: 27px;
+        border-radius: 3px;
+        text-transform: capitalize;
+      }
+    }
+
+    >span:nth-child(3) {
+      >.bar-buttons {
+        margin: 0px;
+
+        >button {
+          width: 34px;
+          height: 34px;
+          margin: 0px;
+        }
+      }
+    }
+  }
+
+  .menu-list {
+    .menu-list-header {
+      text-transform: capitalize;
+    }
+
+    .menu-list-content {
+      text-transform: capitalize;
+      .item-inner {
+        background-image: none !important;
+        padding-right: 0px !important;
+      }
+      .menu-list-note {
+        text-transform: uppercase;
+      }
+    }
+
+    .menu-list-content:first-of-type {
+      border-top: 0px;
+    }
+  }
+}

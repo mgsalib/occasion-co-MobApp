@@ -14,35 +14,35 @@
 
 // text colors ==============================
 .txt-primary {
-  color: map-get($colors, primary);
+  color: map-get($colors, primary) !important;
 }
 
 .txt-vilot {
-  color: map-get($colors, vilot-dark);
+  color: map-get($colors, vilot-dark) !important;
 }
 
 .txt-yellow {
-    color: map-get($colors , yellow);
+    color: map-get($colors , yellow) !important;
 }
 
 .txt-green {
-    color: map-get($colors, green);
+    color: map-get($colors, green) !important;
 }
 
 .txt-red {
-    color: map-get($colors , red);
+    color: map-get($colors , red) !important;
 }
 
 .txt-gray-d {
-    color: map-get($colors, gray-dark);
+    color: map-get($colors, gray-dark) !important;
 }
 
 .txt-gray {
-  color: map-get($colors, gray);
+  color: map-get($colors, gray) !important;
 }
 
 .txt-white {
-  color: map-get($colors, white);
+  color: map-get($colors, white) !important;
 }
 
 // background-colors ==============================
