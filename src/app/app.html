@@ -11,7 +11,7 @@
 
       <span class="padding-l-8">
         <p class="txt-gray font-18 margin-b-4">{{getUsername()}}</p>
-        <button class="bg-yellow txt-white">logout</button>
+        <button class="bg-yellow txt-white">{{'main-menu.logout' | translate}}</button>
       </span>
 
       <span>
@@ -25,34 +25,34 @@
 
     <!-- menu list -->
     <ion-list class="menu-list margin-b-16 padding-h-16">
-      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">account</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">deals and offers</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">my orders</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.account' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.offers' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.order' | translate}}</button>
     </ion-list>
 
     <ion-list class="menu-list margin-b-16 padding-h-16">
-      <ion-list-header class="menu-list-header font-16 padding-0 txt-primary">information</ion-list-header>
+      <ion-list-header class="menu-list-header font-16 padding-0 txt-primary">{{'main-menu.info' | translate}}</ion-list-header>
 
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">about us</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">terms and conditions</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">privacy policy</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">contact us</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.about-us' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.terms' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.privacy' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.contacts' | translate}}</button>
     </ion-list>
 
     <ion-list class="menu-list margin-b-16 padding-h-16">
-      <ion-list-header class="menu-list-header font-16 padding-0 txt-primary">settings</ion-list-header>
-    
+      <ion-list-header class="menu-list-header font-16 padding-0 txt-primary">{{'main-menu.settings' | translate}}</ion-list-header>
+
       <button ion-item class="menu-list-content font-16 padding-0 txt-gray">
-        language
-        <ion-note item-end class="menu-list-note txt-green">english</ion-note>
+        {{'main-menu.language' | translate}}
+        <ion-note item-end class="menu-list-note txt-green">{{'main-menu.lang-name' | translate}}</ion-note>
       </button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-gray">
-        country
-        <ion-note item-end class="menu-list-note txt-green">egypt</ion-note>
+        {{'main-menu.country' | translate}}
+        <ion-note item-end class="menu-list-note txt-green">{{'main-menu.count-name' | translate}}</ion-note>
       </button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-gray">
-        currency
-        <ion-note item-end class="menu-list-note txt-green">egp</ion-note>
+        {{'main-menu.currency' | translate}}
+        <ion-note item-end class="menu-list-note txt-green">{{'main-menu.egp' | translate}}</ion-note>
       </button>
     </ion-list>
 

@@ -1,60 +1,83 @@
 {
-    "general": {
-        "confirm": "Confirm",
-        "cancel": "Cancel",
-        "toast-close": "Close",
-        "ok": "OK",
-        "next": "Next",
-        "submit": "Submit",
-        "general-error": "System Error, please try again later",
-        "logout-title": "Logout",
-        "logout-msg": "Are you sure, you want to logout?",
-        "connection": "Please check your internet connection",
-        "timeout": "Sorry, we could not excute your request. Please try again",
-        "reference": "Reference",
-        "down": "Sorry, the service is not available now. Please try again later",
-        "done": "Done",
-        "success": "Operation Success",
-        "save": "Save",
-        "delete": "Delete",
-        "enter": "Enter ",
-        "please": "Please ",
-        "edit": "Edit",
-        "add": "Add",
-        "title": "Occasion and Co",
-        "info": "The latest mobile application on Android and iPhone  in the KSA and the Gulf countries to set up and organize all events and weddings"
-    },
-    "login": {
-        "login": "Login",
-        "new-account": "New Account",
-        "fb": "Facebook Account",
-        "email": "Email",
-        "passowrd": "Passowrd",
-        "remember-me": "remember username",
-        "forget-password": "forget password"
-    },
-    "register": {
-        "title": "Register",
-        "username": "Username",
-        "password": "Password",
-        "re-password": "Re-enter Password",
-        "phone": "Phone Number",
-        "email": "Email",
-        "first": "First Name",
-        "last": "Last Name",
-        "re-password-error": "Password not match",
-        "email-error": "Email not valid",
-        "mobile": "Mobile"
-    },
-    "forget": {
-        "title": "Forget Password",
-        "message": "enter your email address to change your password",
-        "reset": "Reset Password",
-        "succ": "Your password has been sent to your registered email",
-        "error": "Email not valid, please enter valid email"
-    },
+  "general": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "toast-close": "Close",
+    "ok": "OK",
+    "next": "Next",
+    "submit": "Submit",
+    "general-error": "System Error, please try again later",
+    "logout-title": "Logout",
+    "logout-msg": "Are you sure, you want to logout?",
+    "connection": "Please check your internet connection",
+    "timeout": "Sorry, we could not excute your request. Please try again",
+    "reference": "Reference",
+    "down": "Sorry, the service is not available now. Please try again later",
+    "done": "Done",
+    "success": "Operation Success",
+    "save": "Save",
+    "delete": "Delete",
+    "enter": "Enter ",
+    "please": "Please ",
+    "edit": "Edit",
+    "add": "Add",
+    "title": "Occasion and Co",
+    "info": "The latest mobile application on Android and iPhone  in the KSA and the Gulf countries to set up and organize all events and weddings"
+  },
 
-    "landing": {
-        "title": "Welcome!"
-    }
+  "login": {
+    "login": "Login",
+    "new-account": "New Account",
+    "fb": "Facebook Account",
+    "email": "Email",
+    "passowrd": "Passowrd",
+    "remember-me": "remember username",
+    "forget-password": "forget password"
+  },
+
+  "register": {
+    "title": "Register",
+    "username": "Username",
+    "password": "Password",
+    "re-password": "Re-enter Password",
+    "phone": "Phone Number",
+    "email": "Email",
+    "first": "First Name",
+    "last": "Last Name",
+    "re-password-error": "Password not match",
+    "email-error": "Email not valid",
+    "mobile": "Mobile"
+  },
+
+  "forget": {
+    "title": "Forget Password",
+    "message": "enter your email address to change your password",
+    "reset": "Reset Password",
+    "succ": "Your password has been sent to your registered email",
+    "error": "Email not valid, please enter valid email"
+  },
+
+  "landing": {
+    "title": "Welcome!"
+  },
+
+  "main-menu": {
+    "logout": "logout",
+    "account": "my account",
+    "offers": "deals and offers",
+    "order": "my order",
+    "info": "information",
+    "about-us": "about us",
+    "terms": "terms and conditions",
+    "privacy": "privacy policy",
+    "contacts": "contact us",
+    "settings": "settings",
+    "language": "language",
+    "country": "country",
+    "currency": "currency",
+    "lang-name": "english",
+    "count-name": "egypt",
+    "egp": "egp"
+  }
+
 }
