@@ -82,5 +82,9 @@
 
   "cat": {
     "title": "category name"
+  },
+
+  "prod": {
+    "title": "market name"
   }
 }
