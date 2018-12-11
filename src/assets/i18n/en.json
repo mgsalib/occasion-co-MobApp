@@ -78,6 +78,9 @@
     "lang-name": "english",
     "count-name": "egypt",
     "egp": "egp"
-  }
+  },
 
+  "cat": {
+    "title": "category name"
+  }
 }

@@ -26,4 +26,9 @@ export class LandingPage {
       this.products = result;
     });
   }
+
+  // open categories page function
+  Category() {
+    this.navCtrl.push("CategoriesPage");
+  }
 }
