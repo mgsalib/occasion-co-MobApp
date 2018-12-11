@@ -1,5 +1,5 @@
 <!-- main menu -->
-<ion-menu [content]="content" type="overlay" [swipeEnabled]="globals.isUserLoggedIn" [enabled]="globals.isUserLoggedIn">
+<ion-menu [content]="content" type="overlay">
   <!-- menu content -->
   <ion-content class="main-slide-menu">
 
@@ -10,7 +10,7 @@
       </span>
 
       <span class="padding-l-8">
-        <p class="txt-gray font-18 margin-b-4">username</p>
+        <p class="txt-gray font-18 margin-b-4">{{getUsername()}}</p>
         <button class="bg-yellow txt-white">logout</button>
       </span>
 
@@ -57,7 +57,7 @@
     </ion-list>
 
     <!-- <ion-list no-lines>
-<!-- [enabled]="globals.isUserLoggedIn"  -->
+<!-- [enabled]="globals.isUserLoggedIn"
 <ion-menu [content]="content" type="overlay">
   <ion-content class="no-margin-content menu-content">
     <ion-buttons right>

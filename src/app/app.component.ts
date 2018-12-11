@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TranslateService } from '@ngx-translate/core';
 import { AlertProvider, GlobalProvider } from "../providers/providers";
+import { Storage } from '@ionic/storage';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +18,8 @@ export class MyApp {
   pages: Array<{ title: string, component: any }>;
 
   constructor(private platform: Platform, private statusBar: StatusBar,
-    private splashScreen: SplashScreen, private translate: TranslateService, private globals: GlobalProvider) {
+    private splashScreen: SplashScreen, private translate: TranslateService,
+    private globals: GlobalProvider, private storage: Storage) {
 
     this.initializeApp();
     // used for an example of ngFor and navigation
@@ -34,6 +36,9 @@ export class MyApp {
       this.splashScreen.hide();
       this.translate.setDefaultLang("en");
       this.translate.use("en");
+      this.storage.get("userInfo_occ").then(info => {
+        this.globals.userInfo = info;
+      });
     });
   }
 
@@ -49,6 +54,15 @@ export class MyApp {
   logout() {
     this.globals.isUserLoggedIn = false;
     this.nav.setRoot("LoginPage");
+  }
+
+  getUsername() {
+    if (this.globals.userInfo) {
+      return this.globals.userInfo.userName;
+    }
+    else {
+      return "";
+    }
   }
 }
 

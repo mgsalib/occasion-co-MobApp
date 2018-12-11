@@ -63,8 +63,9 @@ export class LoginPage {
   doLogin() {
     if (this.validateInputs()) {
       this.httpCall.get(this.globals.servicesURL.login, "?Email=" + this.email + "&Password=" + this.password).subscribe(result => {
+        this.globals.userInfo = result;
+        this.storage.set("userInfo_occ", result);
         this.globals.isUserLoggedIn = true;
-        this.globals.userId = result;
         this.rememberMeChanged();
         if (this.fromCart) {
           this.navCtrl.pop();

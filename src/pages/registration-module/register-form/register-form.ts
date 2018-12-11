@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpBaseProvider, GlobalProvider, AlertProvider } from "../../../providers/providers";
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the RegisterFormPage page.
@@ -26,7 +27,7 @@ export class RegisterFormPage {
   mobile: string = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private httpCall: HttpBaseProvider, private globals: GlobalProvider, private alert: AlertProvider) {
+    private httpCall: HttpBaseProvider, private globals: GlobalProvider, private alert: AlertProvider, private storage: Storage) {
   }
 
   ionViewDidLoad() {
@@ -42,7 +43,13 @@ export class RegisterFormPage {
       var data = "UserName=" + this.username + "&Password=" + this.password + "&Email=" + this.email + "&FirstName=" + this.firstname + "&LastName=" + this.lastname + "&Phone=" + this.phone + "&Mobile=" + this.mobile;
       this.httpCall.post(this.globals.servicesURL.register, "", data).subscribe(result => {
         this.globals.userId = result;
-        this.navCtrl.push("LandingPage");
+        this.storage.set("userId_occ", result);
+        this.httpCall.get(this.globals.servicesURL.user_details, "UserId=" + result).subscribe(info => {
+          this.globals.userInfo = info;
+          this.storage.set("userInfo_occ", info);
+          this.globals.isUserLoggedIn = true;
+          this.navCtrl.push("LandingPage");
+        });
       });
     }
   }

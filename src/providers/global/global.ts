@@ -12,7 +12,8 @@ export class GlobalProvider {
   public isUserLoggedIn: boolean = false;
   public accessToken: string = "";
   public userId: string = "";
-
+  public userInfo: any = {};
+  
   public servicesURL: any = {
     login: {
       url: "User/AuthenticateUser"
@@ -24,8 +25,11 @@ export class GlobalProvider {
     forgetPassword: {
       url: "User/ForgetPassword"
     },
-    products:{
-      url:"Product/Get"
+    products: {
+      url: "Product/Get"
+    },
+    user_details: {
+      url: "User/GetById?"
     }
   }
   constructor()

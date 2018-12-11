@@ -16,14 +16,14 @@ import { HttpBaseProvider, GlobalProvider } from "../../providers/providers";
 })
 export class LandingPage {
 
+  products: any = [];
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private httpCall: HttpBaseProvider, private globals: GlobalProvider) {
   }
 
   ionViewDidLoad() {
     this.httpCall.get(this.globals.servicesURL.products).subscribe(result => {
-      debugger
+      this.products = result;
     });
   }
-
 }
