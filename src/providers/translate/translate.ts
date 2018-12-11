@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
-
+import { GlobalProvider } from "../global/global";
 
 @Injectable()
 export class TranslateProvider {
 
-  constructor(public translate: TranslateService, private storage: Storage) {
+  constructor(public translate: TranslateService, private storage: Storage, private globals: GlobalProvider) {
   }
 
   changeLang() {
@@ -51,8 +51,7 @@ export class TranslateProvider {
     });
   }
 
-  getCurrentLang()
-  {
+  getCurrentLang() {
     return this.translate.currentLang;
   }
 }

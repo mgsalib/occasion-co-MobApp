@@ -1,11 +1,10 @@
-<app-header headerTxt="cat.title" showCart="true"></app-header>
+<app-header [headerTxt]="categoryDetails.title" showCart="true"></app-header>
 
 <ion-content class="app-background">
   <ion-grid class="padding-t-16 padding-r-16 padding-l-16">
     <ion-row>
-
       <!-- market loop row -->
-      <ion-col col-12 class="market-card padding-0 margin-b-32" (click)="ProductDetails()">
+      <ion-col col-12 class="market-card padding-0 margin-b-32" (click)="openProducts(market)" *ngFor="let market of markets">
         <ul class="margin-0 padding-0">
           <!-- market image -->
           <li class="margin-b-2">
@@ -13,15 +12,14 @@
           </li>
           <!-- market name -->
           <li class="margin-0">
-            <h6 class="font-16 margin-0 txt-white">market name</h6>
+            <h6 class="font-16 margin-0 txt-white">{{market.title}}</h6>
           </li>
           <!-- market address -->
           <li>
-            <p class="font-14 margin-0 txt-gray-d">market address</p>
+            <p class="font-14 margin-0 txt-gray-d">{{market.address}}</p>
           </li>
         </ul>
       </ion-col>
-
     </ion-row>
   </ion-grid>
 </ion-content>

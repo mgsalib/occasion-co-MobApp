@@ -16,19 +16,19 @@ import { HttpBaseProvider, GlobalProvider } from "../../providers/providers";
 })
 export class LandingPage {
 
-  products: any = [];
+  categories: any = [];
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private httpCall: HttpBaseProvider, private globals: GlobalProvider) {
   }
 
   ionViewDidLoad() {
-    this.httpCall.get(this.globals.servicesURL.products).subscribe(result => {
-      this.products = result;
+    this.httpCall.get(this.globals.servicesURL.categories).subscribe(result => {
+      this.categories = result;
     });
   }
 
   // open categories page function
-  Category() {
-    this.navCtrl.push("CategoriesPage");
+  openProducts(item) {
+    this.navCtrl.push("CategoriesPage", item);
   }
 }

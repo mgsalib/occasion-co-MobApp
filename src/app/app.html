@@ -1,26 +1,23 @@
 <!-- main menu -->
-<ion-menu [content]="content" type="overlay">
+<ion-menu [content]="content" type="overlay" side="left">
   <!-- menu content -->
   <ion-content class="main-slide-menu">
 
     <!-- user widget -->
-    <div class="user-widget margin-t-16 margin-b-16 padding-l-16 padding-b-8">
+    <div class="user-widget margin-t-16 margin-b-16 padding-l-16 padding-b-8" *ngIf="globals.isUserLoggedIn">
       <span>
         <img src="../assets/imgs/Cat-type-01.jpg" />
       </span>
 
       <span class="padding-l-8">
         <p class="txt-gray font-18 margin-b-4">{{getUsername()}}</p>
-        <button class="bg-yellow txt-white">{{'main-menu.logout' | translate}}</button>
+        <button class="bg-yellow txt-white" (click)="logout()" menuClose>{{'main-menu.logout' | translate}}</button>
       </span>
-
-      <span>
-        <ion-buttons>
-          <button ion-button icon-only menuClose clear>
+      <ion-buttons>
+        <button ion-button icon-only menuClose clear>
             <ion-icon name="ios-close-circle-outline" color="light"></ion-icon>
           </button>
-        </ion-buttons>
-      </span>
+      </ion-buttons>
     </div>
 
     <!-- menu list -->
@@ -42,7 +39,7 @@
     <ion-list class="menu-list margin-b-16 padding-h-16">
       <ion-list-header class="menu-list-header font-16 padding-0 txt-primary">{{'main-menu.settings' | translate}}</ion-list-header>
 
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="changeLang()">
         {{'main-menu.language' | translate}}
         <ion-note item-end class="menu-list-note txt-green">{{'main-menu.lang-name' | translate}}</ion-note>
       </button>
@@ -56,26 +53,6 @@
       </button>
     </ion-list>
 
-    <!-- <ion-list no-lines>
-<!-- [enabled]="globals.isUserLoggedIn"
-<ion-menu [content]="content" type="overlay">
-  <ion-content class="no-margin-content menu-content">
-    <ion-buttons right>
-      <button ion-button icon-only menuClose clear>
-        <ion-icon name="ios-close-circle-outline" color="light"></ion-icon>
-    </button>
-    </ion-buttons>
-    <ion-list no-lines>
-      <ng-container *ngFor="let p of pages">
-        <button no-padding no-margin text-center menuClose ion-item color="light" (click)="openPage(p)" *ngIf="p.tab == globals.activeTab">
-          {{p.title | translate}}
-        </button>
-      </ng-container>
-    </ion-list>
-    <button ion-button clear block menuClose (click)="logout()">
-      <ion-icon name="md-log-out" color="danger"></ion-icon>
-      <span color="light" ion-text text-uppercase margin> Logout </span>
-    </button> -->
   </ion-content>
 
 </ion-menu>

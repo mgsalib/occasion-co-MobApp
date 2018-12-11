@@ -1,7 +1,9 @@
-<app-header headerTxt="prod.title" showCart="true"></app-header>
+<app-header [headerTxt]="marketDetails.title" showCart="true"></app-header>
 
 <ion-content class="app-background">
   <ion-grid class="padding-16">
-    ProductPage
+    <div *ngFor="let item of products">
+      {{item.name}}
+    </div>
   </ion-grid>
 </ion-content>

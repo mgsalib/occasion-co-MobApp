@@ -14,9 +14,9 @@
     <ion-row>
       <!-- type card -->
       <ion-col col-12 class="padding-0">
-        <ng-container *ngFor="let item of products">
+        <ng-container *ngFor="let item of categories">
           <!-- the loop item -->
-          <ion-card (click)="Category()" class="cat-card margin-0" style="background-image: url(../assets/imgs/Cat-type-01.jpg);">
+          <ion-card (click)="openProducts(item)" class="cat-card margin-0" style="background-image: url(../assets/imgs/Cat-type-01.jpg);">
             <header class="cat-card-title padding-h-16">
               <div>
                 <!-- catagory name -->

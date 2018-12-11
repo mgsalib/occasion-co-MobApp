@@ -13,7 +13,7 @@ export class GlobalProvider {
   public accessToken: string = "";
   public userId: string = "";
   public userInfo: any = {};
-  
+
   public servicesURL: any = {
     login: {
       url: "User/AuthenticateUser"
@@ -26,10 +26,18 @@ export class GlobalProvider {
       url: "User/ForgetPassword"
     },
     products: {
-      url: "Product/Get"
+      url: "Product/GetByMarketId"
     },
     user_details: {
       url: "User/GetById?"
+    },
+    categories:
+    {
+      url: "Category/Get"
+    },
+    markets:
+    {
+      url: "Market/GetByCategoryId"
     }
   }
   constructor()

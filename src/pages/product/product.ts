@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HttpBaseProvider, GlobalProvider } from "../../providers/providers";
 
 /**
  * Generated class for the ProductPage page.
@@ -15,11 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProductPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  products: any = [];
+  marketDetails: any = {};
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private httpCall: HttpBaseProvider, private globals: GlobalProvider) {
+    this.marketDetails = this.navParams.data;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProductPage');
+    this.httpCall.get(this.globals.servicesURL.products, "?MarketId=" + this.marketDetails.marketId).subscribe(result => {
+      this.products = result;
+    });
   }
-
 }
