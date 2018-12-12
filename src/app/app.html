@@ -1,5 +1,5 @@
 <!-- main menu -->
-<ion-menu [content]="content" type="overlay" side="left">
+<ion-menu [content]="content" type="overlay" side="left" *ngIf="langService.getCurrentLang() != 'ar'">
   <!-- menu content -->
   <ion-content class="main-slide-menu">
 
@@ -57,5 +57,63 @@
 
 </ion-menu>
 
+<!-- main menu -->
+<ion-menu [content]="content" type="overlay" side="right" *ngIf="langService.getCurrentLang() == 'ar'">
+  <!-- menu content -->
+  <ion-content class="main-slide-menu">
+
+    <!-- user widget -->
+    <div class="user-widget margin-t-16 margin-b-16 padding-l-16 padding-b-8" *ngIf="globals.isUserLoggedIn">
+      <span>
+        <img src="../assets/imgs/Cat-type-01.jpg" />
+      </span>
+
+      <span class="padding-l-8">
+        <p class="txt-gray font-18 margin-b-4">{{getUsername()}}</p>
+        <button class="bg-yellow txt-white" (click)="logout()" menuClose>{{'main-menu.logout' | translate}}</button>
+      </span>
+      <ion-buttons>
+        <button ion-button icon-only menuClose clear>
+            <ion-icon name="ios-close-circle-outline" color="light"></ion-icon>
+          </button>
+      </ion-buttons>
+    </div>
+
+    <!-- menu list -->
+    <ion-list class="menu-list margin-b-16 padding-h-16">
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.account' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.offers' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.order' | translate}}</button>
+    </ion-list>
+
+    <ion-list class="menu-list margin-b-16 padding-h-16">
+      <ion-list-header class="menu-list-header font-16 padding-0 txt-primary">{{'main-menu.info' | translate}}</ion-list-header>
+
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.about-us' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.terms' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.privacy' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.contacts' | translate}}</button>
+    </ion-list>
+
+    <ion-list class="menu-list margin-b-16 padding-h-16">
+      <ion-list-header class="menu-list-header font-16 padding-0 txt-primary">{{'main-menu.settings' | translate}}</ion-list-header>
+
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="changeLang()">
+        {{'main-menu.language' | translate}}
+        <ion-note item-end class="menu-list-note txt-green">{{'main-menu.lang-name' | translate}}</ion-note>
+      </button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">
+        {{'main-menu.country' | translate}}
+        <ion-note item-end class="menu-list-note txt-green">{{'main-menu.count-name' | translate}}</ion-note>
+      </button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">
+        {{'main-menu.currency' | translate}}
+        <ion-note item-end class="menu-list-note txt-green">{{'main-menu.egp' | translate}}</ion-note>
+      </button>
+    </ion-list>
+
+  </ion-content>
+
+</ion-menu>
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -64,7 +64,9 @@ export class MyApp {
   }
 
   changeLang() {
-    this.langService.changeLang();
+    setTimeout(() => {
+      this.langService.changeLang();
+    }, 100);
   }
 
 }
