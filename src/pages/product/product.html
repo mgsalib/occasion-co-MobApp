@@ -2,8 +2,150 @@
 
 <ion-content class="app-background">
   <ion-grid class="padding-16">
+    <!-- image -->
+    <ion-row class="margin-b-16">
+      <ion-col col-12 class="market-card padding-0">
+        <ul class="margin-0 padding-0">
+          <!-- market image -->
+          <li class="margin-b-2">
+            <img src="../../assets/imgs/cat-image-01.png" />
+          </li>
+          <!-- market name -->
+          <li class="margin-0">
+            <h6 class="font-16 margin-0 txt-white">market name</h6>
+          </li>
+        </ul>
+      </ion-col>
+    </ion-row>
+
+    <!-- about the market -->
+    <ion-row class="margin-b-16">
+      <ion-col col-12 class="prod-info-widget padding-0">
+        <h6 class="txt-yellow font-14 margin-t-0 margin-b-8">
+          {{'prod-info.widget-title-1' | translate}}
+        </h6>
+
+        <p class="txt-gray font-12 margin-0">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry’s standard
+          dummy text ever since the 1500s,
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <!-- market contact details -->
+    <ion-row class="margin-b-16">
+      <ion-col col-12 class="prod-info-widget padding-0">
+        <h6 class="txt-yellow font-14 margin-t-0 margin-b-8">
+          {{'prod-info.widget-title-2' | translate}}
+        </h6>
+
+        <ul class="margin-0 padding-0 txt-gray">
+          <!-- item 01 -->
+          <li class="margin-b-16">
+            <span class="bg-yellow">
+              <ion-icon class="font-24 txt-white" ios="ios-navigate" md="md-navigate"></ion-icon>
+            </span>
+            <label class="padding-l-8">address</label>
+          </li>
+
+          <!-- item 02 -->
+          <li>
+            <span class="bg-yellow">
+              <ion-icon class="font-24 txt-white" ios="ios-call" md="md-call"></ion-icon>
+            </span>
+            <label class="padding-l-8">phone number</label>
+          </li>
+        </ul>
+      </ion-col>
+    </ion-row>
+
+    <!-- price details -->
+    <ion-row class="margin-b-16">
+      <ion-col col-12 class="prod-info-widget padding-0">
+        <h6 class="txt-yellow font-14 margin-t-0 margin-b-8">
+          {{'prod-info.widget-title-3' | translate}}
+        </h6>
+
+        <div class="price-bar margin-b-16">
+          <!-- price, currancy and unit -->
+          <span class="font-24 txt-white">125 egp/kg</span>
+
+          <!-- increase and decrease amount  -->
+          <span class="unit-bar">
+            <button class="bg-transparent margin-0 padding-0 txt-yellow font-18">
+              <ion-icon ios="ios-add" md="md-add"></ion-icon>
+            </button>
+            <label class="txt-white font-16">01</label>
+            <button class="bg-transparent margin-0 padding-0 txt-yellow font-18">
+              <ion-icon ios="ios-remove" md="md-remove"></ion-icon>
+            </button>
+          </span>
+        </div>
+
+        <div>
+          <button class="button-field font-16 bg-yellow padding-h-16 margin-b-16 txt-primary">
+            {{'prod-info.to-cart' | translate}}
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <!-- more in this market -->
+    <ion-row class="margin-b-0">
+      <ion-col col-12 class="prod-info-widget padding-0">
+        <h6 class="txt-yellow font-14 margin-t-0 margin-b-8">
+          {{'prod-info.widget-title-4' | translate}}
+        </h6>
+      </ion-col>
+
+      <!-- item card -->
+      <ion-col col-6 class="prod-item padding-t-0 padding-r-8 padding-b-0 padding-l-0">
+        <img src="../../assets/imgs/Cat-type-02.jpg" />
+        <h6 class="txt-white font-14 margin-0">product name</h6>
+        <!-- rate bar -->
+        <div class="rate-bar">
+          <ion-icon ios="ios-star" md="md-star"></ion-icon>
+          <ion-icon ios="ios-star" md="md-star"></ion-icon>
+          <ion-icon ios="ios-star" md="md-star"></ion-icon>
+          <ion-icon ios="ios-star-half" md="md-star-half"></ion-icon>
+          <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
+        </div>
+      </ion-col>
+
+      <!-- item card -->
+      <ion-col col-6 class="prod-item padding-t-0 padding-r-0 padding-b-0 padding-l-8">
+        <img src="../../assets/imgs/Cat-type-02.jpg" />
+        <h6 class="txt-white font-14 margin-0">product name</h6>
+        <!-- rate bar -->
+        <div class="rate-bar">
+          <ion-icon ios="ios-star" md="md-star"></ion-icon>
+          <ion-icon ios="ios-star" md="md-star"></ion-icon>
+          <ion-icon ios="ios-star" md="md-star"></ion-icon>
+          <ion-icon ios="ios-star-half" md="md-star-half"></ion-icon>
+          <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <!-- ============================================================================================================== -->
     <div *ngFor="let item of products">
       {{item.name}}
     </div>
+  </ion-grid>
+
+  <!-- location bar -->
+  <ion-grid class="location-bar bg-white padding-8">
+    <ion-row>
+      <ion-col col-6 class="padding-h-8 padding-t-0 padding-b-0">
+        <img src="../../assets/imgs/NearestToYou.svg" height="32" class="margin-r-8" />
+        <span class="txt-primary bold-txt">{{'prod-info.nearst' | translate}}</span>
+      </ion-col>
+
+      <ion-col col-6 class="padding-h-8 padding-t-0 padding-b-0">
+        <img src="../../assets/imgs/ChoosePlace.svg" height="32" class="margin-r-8" />
+        <span class="txt-primary bold-txt">{{'prod-info.place' | translate}}</span>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>

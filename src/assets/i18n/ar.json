@@ -86,5 +86,15 @@
 
   "prod": {
     "title": "اسم المحل"
+  },
+
+  "prod-info": {
+    "widget-title-1": "حول السوق",
+    "widget-title-2": "أتصل بنا",
+    "widget-title-3": "السعر",
+    "widget-title-4": "المذيد لدينا",
+    "to-cart": "اضف الي الحافظة",
+    "nearst": "الاقرب اليك",
+    "place": "اختر المكان"
   }
 }

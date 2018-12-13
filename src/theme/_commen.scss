@@ -514,3 +514,10 @@
     }
   }
 }
+
+// rateing stars ==============================
+.rate-bar {
+  >.icon {
+    color: map-get($colors, yellow);
+  }
+}

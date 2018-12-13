@@ -103,6 +103,13 @@
     padding-right: 32px !important;
   }
 
+  // rateing stars ==============================
+  .rate-bar {
+    >.icon {
+      transform: scaleX(-1);
+    }
+  }
+
   // ionic classes  ==============================
   .searchbar-input {
     text-align: right;
@@ -116,14 +123,35 @@
 
   // landing page  ==============================
   page-landing {
-    .rate-bar {
-      >.icon {
-        transform: scaleX(-1);
-      }
-    }
-
     .cat-card-like {
       text-align: left !important;
+    }
+  }
+
+  // product details page  ==============================
+  page-product {
+    span.unit-bar {
+      >button:first-of-type {
+        border-right-width: 1px !important;
+        border-left-width: 0px !important;
+        border-radius: 0px 4px 4px 0px !important;
+      }
+
+      >button:last-of-type {
+        border-right-width: 0px !important;
+        border-left-width: 1px !important;
+        border-radius: 4px 0px 0px 4px !important;
+      }
+
+      >label {
+        order: 0;
+        flex: 1 1 auto;
+        align-self: center;
+        width: 40px;
+        line-height: 28px !important;
+        border: 1px solid map-get($colors, yellow);
+        text-align: center;
+      }
     }
   }
 }

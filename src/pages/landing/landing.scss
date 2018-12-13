@@ -28,12 +28,6 @@ page-landing {
           text-overflow: ellipsis;
           white-space: nowrap;
         }
-
-        >.rate-bar {
-          >.icon {
-            color: map-get($colors, yellow);
-          }
-        }
       }
 
       >div:nth-child(2) {

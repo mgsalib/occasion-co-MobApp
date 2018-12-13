@@ -87,5 +87,15 @@
 
   "prod": {
     "title": "market name"
+  },
+
+  "prod-info": {
+    "widget-title-1": "about the market",
+    "widget-title-2": "contact details",
+    "widget-title-3": "price",
+    "widget-title-4": "more in this market",
+    "to-cart": "add to cart",
+    "nearst": "nearst to you",
+    "place": "choose place"
   }
 }
