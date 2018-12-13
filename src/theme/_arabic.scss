@@ -103,6 +103,17 @@
     padding-right: 32px !important;
   }
 
+  // ionic classes  ==============================
+  .searchbar-input {
+    text-align: right;
+    padding: 0px 28px;
+  }
+
+  .searchbar-search-icon {
+    right: inherit !important;
+    left: 9px;
+  }
+
   // landing page  ==============================
   page-landing {
     .rate-bar {
