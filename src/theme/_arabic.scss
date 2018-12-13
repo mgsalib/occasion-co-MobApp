@@ -1,5 +1,10 @@
 .arabic {
 
+  // ar font ==============================
+  ion-app.ios {
+    font-family: Cairo !important;
+  }
+
   // margin classes ==============================
   .margin-r-0 {
     margin-left: 0px !important;
