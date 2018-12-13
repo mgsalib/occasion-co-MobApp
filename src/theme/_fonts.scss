@@ -1,7 +1,8 @@
+// en font ==============================
 @font-face {
-    font-family: FuturaStd;
-    src: url(../assets/fonts/FuturaStd-Book.ttf) format("truetype");
-    font-weight: normal;
+  font-family: FuturaStd;
+  src: url(../assets/fonts/FuturaStd-Book.ttf) format("truetype");
+  font-weight: normal;
 }
 
 @font-face {
@@ -10,18 +11,18 @@
   font-weight: bold;
 }
 
-* {
-    font-family: FuturaStd;
+ion-app.ios {
+  font-family: FuturaStd !important;
 }
 
 .font-12 {
-    font-size: 12px !important;
-    line-height: 18px !important;
+  font-size: 12px !important;
+  line-height: 18px !important;
 }
 
 .font-14 {
-    font-size: 14px !important;
-    line-height: 20px !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
 }
 
 .font-16 {
@@ -51,4 +52,23 @@
 
 .bold-txt {
   font-weight: bold;
+}
+
+// ar font ==============================
+.arabic {
+  @font-face {
+    font-family: Cairo;
+    src: url(../assets/fonts/Cairo-Regular.ttf) format("truetype") !important;
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: Cairo;
+    src: url(../assets/fonts/Cairo-Bold.ttf) format("truetype") !important;
+    font-weight: bold;
+  }
+
+  ion-app.ios {
+    font-family: Cairo !important;
+  }
 }

@@ -1,4 +1,6 @@
 .arabic {
+
+  // margin classes ==============================
   .margin-r-0 {
     margin-left: 0px !important;
   }
@@ -47,6 +49,7 @@
     margin-right: 32px !important;
   }
 
+  // padding classes ==============================
   .padding-r-0 {
     padding-left: 0px !important;
   }
@@ -97,14 +100,14 @@
 
   // landing page  ==============================
   page-landing {
-      .rate-bar {
-          >.icon {
-            transform: scaleX(-1);
-          }
+    .rate-bar {
+      >.icon {
+        transform: scaleX(-1);
       }
+    }
 
-      .cat-card-like {
-          text-align: left !important;
-      }
+    .cat-card-like {
+      text-align: left !important;
+    }
   }
 }
