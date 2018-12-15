@@ -103,10 +103,17 @@
     padding-right: 32px !important;
   }
 
-  // rateing stars ==============================
+  // commen classes ==============================
   .rate-bar {
     >.icon {
       transform: scaleX(-1);
+    }
+  }
+
+  .location-bar {
+    .col:nth-child(1) {
+      border-left: 1px solid map-get($colors, primary);
+      border-right: 0px;
     }
   }
 

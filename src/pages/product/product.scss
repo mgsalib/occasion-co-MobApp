@@ -134,27 +134,4 @@ page-product {
       text-transform: capitalize;
     }
   }
-
-  .location-bar {
-    position: sticky;
-    bottom: 0px;
-
-    .col {
-      text-align: center;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-
-      >span {
-        text-transform: capitalize;
-      }
-    }
-
-    .col:nth-child(1) {
-      border-right: 1px solid map-get($colors, primary);
-    }
-  }
 }

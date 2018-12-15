@@ -1,7 +1,7 @@
 <app-header [headerTxt]="marketDetails.title" showCart="true"></app-header>
 
 <ion-content class="app-background">
-  <ion-grid class="padding-16">
+  <ion-grid class="padding-t-16 padding-r-16 padding-b-0 padding-l-16 fotter-margin">
     <!-- image -->
     <ion-row class="margin-b-16">
       <ion-col col-12 class="market-card padding-0">
@@ -69,7 +69,9 @@
 
         <div class="price-bar margin-b-16">
           <!-- price, currancy and unit -->
-          <span class="font-24 txt-white">125 egp/kg</span>
+          <span class="font-24 txt-white">
+            <span>125</span><span>egp/kg</span>
+          </span>
 
           <!-- increase and decrease amount  -->
           <span class="unit-bar">
@@ -133,19 +135,19 @@
       {{item.name}}
     </div>
   </ion-grid>
-
-  <!-- location bar -->
-  <ion-grid class="location-bar bg-white padding-8">
-    <ion-row>
-      <ion-col col-6 class="padding-h-8 padding-t-0 padding-b-0">
-        <img src="../../assets/imgs/NearestToYou.svg" height="32" class="margin-r-8" />
-        <span class="txt-primary bold-txt">{{'prod-info.nearst' | translate}}</span>
-      </ion-col>
-
-      <ion-col col-6 class="padding-h-8 padding-t-0 padding-b-0">
-        <img src="../../assets/imgs/ChoosePlace.svg" height="32" class="margin-r-8" />
-        <span class="txt-primary bold-txt">{{'prod-info.place' | translate}}</span>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
 </ion-content>
+
+<!-- location bar -->
+<ion-grid class="location-bar bg-white padding-8">
+  <ion-row>
+    <ion-col col-6 class="padding-h-8 padding-t-0 padding-b-0">
+      <img src="../../assets/imgs/NearestToYou.svg" height="32" class="margin-r-8" />
+      <span class="txt-primary bold-txt">{{'prod-info.nearst' | translate}}</span>
+    </ion-col>
+
+    <ion-col col-6 class="padding-h-8 padding-t-0 padding-b-0">
+      <img src="../../assets/imgs/ChoosePlace.svg" height="32" class="margin-r-8" />
+      <span class="txt-primary bold-txt">{{'prod-info.place' | translate}}</span>
+    </ion-col>
+  </ion-row>
+</ion-grid>

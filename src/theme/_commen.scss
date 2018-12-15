@@ -515,9 +515,37 @@
   }
 }
 
-// rateing stars ==============================
+// commen classes ==============================
 .rate-bar {
   >.icon {
     color: map-get($colors, yellow);
   }
+}
+
+.location-bar {
+  position: fixed;
+  bottom: 0px;
+  z-index: 1;
+
+  .col {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    >span {
+      text-transform: capitalize;
+    }
+  }
+
+  .col:nth-child(1) {
+    border-right: 1px solid map-get($colors, primary);
+  }
+}
+
+.fotter-margin {
+  margin-bottom: 64px; 
 }
