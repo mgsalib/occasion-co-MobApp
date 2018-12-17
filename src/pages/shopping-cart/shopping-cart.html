@@ -1,0 +1,97 @@
+<app-header headerTxt="cart.title" showCart="true"></app-header>
+
+<ion-content class="app-background">
+  <ion-grid class="padding-t-16 padding-r-16 padding-b-0 padding-l-16 fotter-margin">
+
+    <!-- segment tabs row  -->
+    <ion-row class="padding-0 margin-b-16">
+      <ion-segment [(ngModel)]="PaymentSteps">
+        <ion-segment-button value="order-list" class="txt-white bg-primary">
+          <span>{{'cart.step-no-01' | translate}}</span>
+          <span>{{'cart.step-name-01' | translate}}</span>
+        </ion-segment-button>
+        <!-- <ion-segment-button value="step-02" class="txt-white bg-primary">
+          <span>{{'cart.step-no-02' | translate}}</span>
+          <span>{{'cart.step-name-02' | translate}}</span>
+        </ion-segment-button> -->
+        <ion-segment-button value="confirm-page" class="txt-white bg-primary">
+          <span>{{'cart.step-no-02' | translate}}</span>
+          <span>{{'cart.step-name-03' | translate}}</span>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-row>
+
+    <!-- segment content row -->
+    <ion-row [ngSwitch]="PaymentSteps">
+      <!-- step 01 -->
+      <ion-col col-12 class="padding-0" *ngSwitchCase="'order-list'">
+        <ion-list class="list-item">
+
+          <button ion-item class="list-item-content margin-b-16">
+            <ion-avatar item-start class="margin-0"><img src="../../assets/imgs/cat-image-01.png"></ion-avatar>
+            <div>
+              <!-- product name -->
+              <h6 class="font-16 txt-white margin-t-0 margin-b-8">product name</h6>
+
+              <!-- increase and decrease amount  -->
+              <span class="unit-bar margin-b-8">
+                <button class="bg-transparent margin-0 padding-0 txt-yellow font-18">
+                  <ion-icon ios="ios-add" md="md-add"></ion-icon>
+                </button>
+                <label class="txt-white font-16">01</label>
+                <button class="bg-transparent margin-0 padding-0 txt-yellow font-18">
+                  <ion-icon ios="ios-remove" md="md-remove"></ion-icon>
+                </button>
+              </span>
+
+              <!-- final price -->
+              <label class="prod-price txt-white font-24">
+                EGP 125
+              </label>
+            </div>
+          </button>
+        </ion-list>
+      </ion-col>
+
+      <!-- step 02 -->
+      <!-- <ion-col col-12 class="padding-0" *ngSwitchCase="'step-02'">
+        Step 02
+      </ion-col> -->
+
+      <!-- step 03 -->
+      <ion-col col-12 class="padding-0" *ngSwitchCase="'confirm-page'">
+
+        <!-- confrimation header -->
+        <ion-row class="confirm-top-margin margin-b-32">
+          <ion-col text-center class="padding-0">
+            <img src="../../assets/imgs/icon-correct.svg" height="64px" />
+            <h6 text-uppercase class="txt-white bold-txt margin-v-8">{{'success.title' | translate}}</h6>
+            <p class="txt-gray margin-0 font-12">{{'success.payment-done' | translate}}</p>
+          </ion-col>
+        </ion-row>
+
+        <!-- order tracking code -->
+        <ion-row>
+          <ion-col text-center class="padding-0">
+            <p class="txt-yellow margin-t-0 margin-b-8 font-14">{{'success.track-order' | translate}}</p>
+            <label class="txt-white margin-0 font-30 bold-txt">A0B1C2D3</label>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<!-- total price bar -->
+<ion-grid class="price-bar bg-white padding-8">
+  <ion-row>
+    <ion-col col-5 class="padding-h-8 padding-t-0 padding-b-0">
+      <button class="bg-yellow txt-primary font-16">{{'cart.pay-now' | translate}}</button>
+    </ion-col>
+
+    <ion-col col-7 class="padding-h-8 padding-t-0 padding-b-0">
+      <span class="txt-gray bold-txt font-30">egp</span>
+      <span class="txt-gray bold-txt font-30">1425</span>
+    </ion-col>
+  </ion-row>
+</ion-grid>

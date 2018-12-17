@@ -117,6 +117,30 @@
     }
   }
 
+  .unit-bar {
+    >button:first-of-type {
+      border-right-width: 1px !important;
+      border-left-width: 0px !important;
+      border-radius: 0px 4px 4px 0px !important;
+    }
+
+    >button:last-of-type {
+      border-right-width: 0px !important;
+      border-left-width: 1px !important;
+      border-radius: 4px 0px 0px 4px !important;
+    }
+
+    >label {
+      order: 0;
+      flex: 1 1 auto;
+      align-self: center;
+      width: 40px;
+      line-height: 28px !important;
+      border: 1px solid map-get($colors, yellow);
+      text-align: center;
+    }
+  }
+
   // ionic classes  ==============================
   .searchbar-input {
     text-align: right;
@@ -135,30 +159,23 @@
     }
   }
 
-  // product details page  ==============================
-  page-product {
-    span.unit-bar {
-      >button:first-of-type {
-        border-right-width: 1px !important;
-        border-left-width: 0px !important;
-        border-radius: 0px 4px 4px 0px !important;
-      }
+  // shoppeing cart page  ==============================
+  page-shopping-cart {
+    .segment-button:first-of-type {
+      border-left-width: 1px !important;
+    }
 
-      >button:last-of-type {
-        border-right-width: 0px !important;
-        border-left-width: 1px !important;
-        border-radius: 4px 0px 0px 4px !important;
-      }
+    .list-item-content:last-of-type {
+      
+      >.item-inner {
+        padding-left: 0px !important;
+        padding-right: 8px !important;
 
-      >label {
-        order: 0;
-        flex: 1 1 auto;
-        align-self: center;
-        width: 40px;
-        line-height: 28px !important;
-        border: 1px solid map-get($colors, yellow);
-        text-align: center;
+        .prod-price {
+          text-align: left !important;
+        }
       }
     }
   }
+
 }

@@ -22,19 +22,19 @@
 }
 
 .txt-yellow {
-    color: map-get($colors , yellow) !important;
+  color: map-get($colors, yellow) !important;
 }
 
 .txt-green {
-    color: map-get($colors, green) !important;
+  color: map-get($colors, green) !important;
 }
 
 .txt-red {
-    color: map-get($colors , red) !important;
+  color: map-get($colors, red) !important;
 }
 
 .txt-gray-d {
-    color: map-get($colors, gray-dark) !important;
+  color: map-get($colors, gray-dark) !important;
 }
 
 .txt-gray {
@@ -47,23 +47,23 @@
 
 // background-colors ==============================
 .bg-primary {
-  background-color: map-get($colors, primary);
+  background-color: map-get($colors, primary) !important;
 }
 
 .bg-vilot {
-  background-color: map-get($colors, vilot-dark);
+  background-color: map-get($colors, vilot-dark) !important;
 }
 
 .bg-yellow {
-  background-color: map-get($colors, yellow);
+  background-color: map-get($colors, yellow) !important;
 }
 
 .bg-green {
-  background-color: map-get($colors, green);
+  background-color: map-get($colors, green) !important;
 }
 
 .bg-red {
-  background-color: map-get($colors, red);
+  background-color: map-get($colors, red) !important;
 }
 
 .bg-gray-d {

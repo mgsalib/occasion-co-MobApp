@@ -29,4 +29,8 @@ export class ProductPage {
       this.products = result;
     });
   }
+
+  AddToCart() {
+      this.navCtrl.push("ShoppingCartPage");
+  }
 }

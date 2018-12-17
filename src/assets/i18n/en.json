@@ -97,5 +97,24 @@
     "to-cart": "add to cart",
     "nearst": "nearst to you",
     "place": "choose place"
+  },
+
+  "cart": {
+    "title": "shopping cart",
+    "step-no-01": "01",
+    "step-no-02": "02",
+    "step-no-03": "03",
+    "step-name-01": "products list",
+    "step-name-02": "card details",
+    "step-name-03": "confirmation",
+    "pay-now": "pay now"
+  },
+
+  "success": {
+    "title": "confirmation",
+    "create-account": "your account was created successfully",
+    "payment-done": "your payment was processed successfully",
+    "track-order": "for tracking your order your the following ticket code"
+    
   }
 }
