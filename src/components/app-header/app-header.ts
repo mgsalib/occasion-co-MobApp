@@ -17,7 +17,7 @@ export class AppHeaderComponent {
   @Input() headerTxt: string = "";
   @Input() showHome: boolean = false;
   @Input() showCart: boolean = false;
-  
+
   constructor(private globals: GlobalProvider, private menu: MenuController, private navCtrl: NavController) {
   }
 
@@ -30,10 +30,11 @@ export class AppHeaderComponent {
   }
 
   cart() {
-    if (this.globals.isUserLoggedIn == true)
-    { }
+    if (this.globals.isUserLoggedIn == true) {
+      this.navCtrl.push("ShoppingCartPage");
+    }
     else {
-      this.navCtrl.push("ShoppingCartPage", { fromCart: true });
+      this.navCtrl.push("LoginPage", { fromCart: true });
     }
   }
 

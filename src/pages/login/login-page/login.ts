@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HttpBaseProvider, GlobalProvider, AlertProvider } from "../../../providers/providers";
+import { HttpBaseProvider, GlobalProvider, AlertProvider, SocialProvider } from "../../../providers/providers";
 import { Storage } from '@ionic/storage';
 
 /**
@@ -24,7 +24,7 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private httpCall: HttpBaseProvider, private globals: GlobalProvider,
-    private storage: Storage, private alert: AlertProvider) {
+    private storage: Storage, private alert: AlertProvider, private social: SocialProvider) {
     if (this.navParams.data.fromCart) {
       this.fromCart = this.navParams.data.fromCart;
     }
@@ -100,5 +100,11 @@ export class LoginPage {
     }
 
     return true;
+  }
+
+  fb() {
+    this.social.openFB().then(result => {
+      this.navCtrl.push("RegisterFormPage", result);
+    });
   }
 }

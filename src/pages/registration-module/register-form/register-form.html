@@ -6,8 +6,8 @@
 
     <!-- upload user image  -->
     <ion-row class="margin-v-16">
-      <ion-col text-center class="padding-0">
-        <img src="assets/imgs/user-image.svg" height="64px" />
+      <ion-col text-center class="padding-0" (click)="capture()">
+        <img [src]="photo" height="64px" />
       </ion-col>
     </ion-row>
 

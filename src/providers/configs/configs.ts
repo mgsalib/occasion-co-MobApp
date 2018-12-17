@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 
 export const ENDPOINT: string = "http://apicoretest.bebrand.tv/api/";
-export const UPLOAD_ENDPOINT: string = "";
+export const UPLOAD_ENDPOINT: string = "http://apicoretest.bebrand.tv/api/FileUpload/Uploadfiles";
 export const AUTHTYPE: string = "#$#$%*@@##m0%%##";
 export const TIMEOUT: number = 60000;
 

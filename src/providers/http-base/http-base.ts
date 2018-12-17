@@ -3,6 +3,8 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import 'rxjs/add/operator/timeout';
 import 'rxjs/add/operator/map';
 import { ConfigClass } from "../providers";
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+
 /*
   Generated class for the HttpBaseProvider provider.
 
@@ -15,7 +17,7 @@ export class HttpBaseProvider {
   url = "";
   params: HttpParams;
 
-  constructor(private _http: HttpClient) {
+  constructor(private _http: HttpClient, private transfer: FileTransfer) {
   }
 
   get(serviceObj, queryString = ""): any {
@@ -59,5 +61,24 @@ export class HttpBaseProvider {
     }
 
     return this._http.delete(ConfigClass.getEndpoint + this.url + queryString, { params: this.params }).timeout(ConfigClass.getTimeout).map(res => res);
+  }
+
+
+  uploadAttachment(file) {
+    const fileTransfer: FileTransferObject = this.transfer.create();
+    let options: FileUploadOptions = {
+      fileKey: 'file',
+      fileName: file.name,
+      mimeType: file.type,
+      headers: {
+      }
+    }
+    return new Promise((resolve, reject) => {
+      fileTransfer.upload(file.localURL, ConfigClass.getUploadEndpoint, options).then(result => {
+        resolve(result.response);
+      }).catch(error => {
+        reject(false);
+      });
+    });
   }
 }

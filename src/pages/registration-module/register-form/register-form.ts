@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpBaseProvider, GlobalProvider, AlertProvider } from "../../../providers/providers";
 import { Storage } from '@ionic/storage';
+import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 /**
  * Generated class for the RegisterFormPage page.
@@ -25,9 +27,21 @@ export class RegisterFormPage {
   firstname: string = "";
   lastname: string = "";
   mobile: string = "";
+  mediaSelected: boolean = false;
+  mediaFile: any = {};
+  photo: string = "assets/imgs/user-image.svg";
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private httpCall: HttpBaseProvider, private globals: GlobalProvider, private alert: AlertProvider, private storage: Storage) {
+    private httpCall: HttpBaseProvider, private globals: GlobalProvider,
+    private alert: AlertProvider, private storage: Storage, private mediaCapture: MediaCapture,
+    private androidPermissions: AndroidPermissions) {
+    if (this.navParams.data != undefined && this.navParams.data != null && this.navParams.data.first_name != undefined) {
+      this.username = this.navParams.data.first_name + " " + this.navParams.data.last_name;
+      this.firstname = this.navParams.data.first_name;
+      this.lastname = this.navParams.data.last_name;
+      this.email = this.navParams.data.email;
+      this.photo = "https://graph.facebook.com/" + this.navParams.data.id + "/picture";
+    }
   }
 
   ionViewDidLoad() {
@@ -40,18 +54,29 @@ export class RegisterFormPage {
 
   register() {
     if (this.validateInputs()) {
-      var data = "UserName=" + this.username + "&Password=" + this.password + "&Email=" + this.email + "&FirstName=" + this.firstname + "&LastName=" + this.lastname + "&Phone=" + this.phone + "&Mobile=" + this.mobile;
-      this.httpCall.post(this.globals.servicesURL.register, "", data).subscribe(result => {
-        this.globals.userId = result;
-        this.storage.set("userId_occ", result);
-        this.httpCall.get(this.globals.servicesURL.user_details, "UserId=" + result).subscribe(info => {
-          this.globals.userInfo = info;
-          this.storage.set("userInfo_occ", info);
-          this.globals.isUserLoggedIn = true;
-          this.navCtrl.push("LandingPage");
+      if (this.mediaSelected) {
+        this.httpCall.uploadAttachment(this.mediaFile).then(result => {
+          debugger
         });
-      });
+      }
+      else {
+        this.doRegister();
+      }
     }
+  }
+
+  doRegister() {
+    var data = "UserName=" + this.username + "&Password=" + this.password + "&Email=" + this.email + "&FirstName=" + this.firstname + "&LastName=" + this.lastname + "&Phone=" + this.phone + "&Mobile=" + this.mobile;
+    this.httpCall.post(this.globals.servicesURL.register, "", data).subscribe(result => {
+      this.globals.userId = result;
+      this.storage.set("userId_occ", result);
+      this.httpCall.get(this.globals.servicesURL.user_details, "UserId=" + result).subscribe(info => {
+        this.globals.userInfo = info;
+        this.storage.set("userInfo_occ", info);
+        this.globals.isUserLoggedIn = true;
+        this.navCtrl.push("LandingPage");
+      });
+    });
   }
 
   validateInputs() {
@@ -85,4 +110,40 @@ export class RegisterFormPage {
     }
     return true;
   }
+
+  capture() {
+    this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.WRITE_EXTERNAL_STORAGE).then(
+      result => {
+        if (result.hasPermission) {
+          this.doCapture();
+        }
+        else {
+          this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.WRITE_EXTERNAL_STORAGE).then(result => {
+            if (result.hasPermission) {
+              this.doCapture();
+            }
+          });
+        }
+      },
+      err => {
+        this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.WRITE_EXTERNAL_STORAGE).then(result => {
+          if (result.hasPermission) {
+            this.doCapture();
+          }
+        });
+      }
+    );
+  }
+
+  doCapture() {
+    this.mediaCapture.captureImage()
+      .then((data: MediaFile[]) => {
+        this.mediaSelected = true;
+        this.mediaFile = data[0];
+         this.photo = this.mediaFile.fullPath;
+      },
+      (err: CaptureError) => console.error(err)
+      );
+  }
+
 }

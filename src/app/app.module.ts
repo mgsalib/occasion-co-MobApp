@@ -6,14 +6,17 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { HttpBaseProvider, InterceptorProvider, AlertProvider, GlobalProvider, TranslateProvider } from '../providers/providers';
+import { HttpBaseProvider, InterceptorProvider, AlertProvider, GlobalProvider, TranslateProvider, SocialProvider } from '../providers/providers';
 import { IonicStorageModule } from '@ionic/storage';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+import { Facebook } from '@ionic-native/facebook';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MediaCapture } from '@ionic-native/media-capture';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
+import { FileTransfer } from '@ionic-native/file-transfer';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -56,7 +59,12 @@ export function createTranslateLoader(http: HttpClient) {
     },
     AlertProvider,
     GlobalProvider,
-    TranslateProvider
+    TranslateProvider,
+    MediaCapture,
+    AndroidPermissions,
+    FileTransfer,
+    SocialProvider,
+    Facebook
   ]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpBaseProvider, GlobalProvider } from "../../providers/providers";
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the LandingPage page.
@@ -17,8 +18,15 @@ import { HttpBaseProvider, GlobalProvider } from "../../providers/providers";
 export class LandingPage {
 
   categories: any = [];
+  savedCategories: any = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private httpCall: HttpBaseProvider, private globals: GlobalProvider) {
+    private httpCall: HttpBaseProvider, private globals: GlobalProvider, private storage: Storage) {
+    this.storage.get("savedCategories").then(result => {
+      if (result) {
+        this.savedCategories = result;
+      }
+    });
   }
 
   ionViewDidLoad() {
@@ -31,4 +39,5 @@ export class LandingPage {
   openProducts(item) {
     this.navCtrl.push("CategoriesPage", item);
   }
+
 }
