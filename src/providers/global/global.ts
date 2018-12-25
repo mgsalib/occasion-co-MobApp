@@ -38,6 +38,13 @@ export class GlobalProvider {
     markets:
     {
       url: "Market/GetByCategoryId"
+    },
+    countries:
+    {
+      url: "Country/Get"
+    },
+    markets_By_Loc: {
+      url: "Market/GetByCategroyNearMe"
     }
   }
   constructor()

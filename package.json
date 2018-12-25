@@ -21,20 +21,25 @@
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
     "@ionic-native/android-permissions": "^4.18.0",
+    "@ionic-native/call-number": "^4.18.0",
     "@ionic-native/core": "~4.17.0",
     "@ionic-native/facebook": "^4.18.0",
     "@ionic-native/file-transfer": "^4.18.0",
+    "@ionic-native/geolocation": "^4.18.0",
     "@ionic-native/media-capture": "^4.18.0",
     "@ionic-native/splash-screen": "~4.17.0",
     "@ionic-native/status-bar": "~4.17.0",
     "@ionic/storage": "2.2.0",
     "@ngx-translate/core": "^9.1.1",
     "@ngx-translate/http-loader": "^3.0.1",
+    "call-number": "^1.0.1",
     "cordova-android": "7.1.0",
     "cordova-plugin-android-permissions": "^1.0.0",
     "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-facebook4": "^4.0.0",
     "cordova-plugin-file": "^6.0.1",
     "cordova-plugin-file-transfer": "^1.7.1",
+    "cordova-plugin-geolocation": "^4.0.1",
     "cordova-plugin-ionic-keyboard": "^2.1.3",
     "cordova-plugin-ionic-webview": "^2.3.1",
     "cordova-plugin-media-capture": "^3.0.2",
@@ -42,10 +47,12 @@
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-whitelist": "^1.3.3",
     "ionic-angular": "3.9.2",
+    "ionic-selectable": "^3.2.0",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.26",
+    "mx.ferreyra.callnumber": "~0.0.2"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.2.1",
@@ -64,7 +71,16 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-media-capture": {},
       "cordova-plugin-android-permissions": {},
-      "cordova-plugin-file-transfer": {}
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "Occasion and Co use your location for full functionality of certain app features"
+      },
+      "mx.ferreyra.callnumber": {},
+      "cordova-plugin-facebook4": {
+        "APP_ID": "926928950840129",
+        "APP_NAME": "Occasions and Co",
+        "FACEBOOK_ANDROID_SDK_VERSION": "4.38.1"
+      }
     },
     "platforms": [
       "android"

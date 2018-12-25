@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 
 export const ENDPOINT: string = "http://apicoretest.bebrand.tv/api/";
 export const UPLOAD_ENDPOINT: string = "http://apicoretest.bebrand.tv/api/ImageUpload/UploadImage";
+export const IMAGES_PATH: string = "http://apicoretest.bebrand.tv/images/";
 export const AUTHTYPE: string = "#$#$%*@@##m0%%##";
 export const TIMEOUT: number = 60000;
 
@@ -22,5 +23,9 @@ export class ConfigClass {
 
     static get getAuthType() {
         return AUTHTYPE;
+    }
+
+    static get getImagesPath() {
+        return IMAGES_PATH;
     }
 }

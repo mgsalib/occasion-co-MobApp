@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HttpBaseProvider, GlobalProvider } from "../../providers/providers";
+import { HttpBaseProvider, GlobalProvider, ConfigClass } from "../../providers/providers";
+import { CallNumber } from '@ionic-native/call-number';
 
 /**
  * Generated class for the ProductPage page.
@@ -18,9 +19,10 @@ export class ProductPage {
 
   products: any = [];
   marketDetails: any = {};
+  imagePath: string = ConfigClass.getImagesPath;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private httpCall: HttpBaseProvider, private globals: GlobalProvider) {
+    private httpCall: HttpBaseProvider, private globals: GlobalProvider, private callNumber: CallNumber) {
     this.marketDetails = this.navParams.data;
   }
 
@@ -31,6 +33,16 @@ export class ProductPage {
   }
 
   AddToCart() {
-      this.navCtrl.push("ShoppingCartPage");
+    this.navCtrl.push("ShoppingCartPage");
+  }
+
+  call(num) {
+    this.callNumber.callNumber(num, true)
+      .then(res => console.log('Launched dialer!', res))
+      .catch(err => console.log('Error launching dialer', err));
+  }
+
+  openProductDetails(item) {
+    this.navCtrl.push("ProductDetailsPage", item);
   }
 }

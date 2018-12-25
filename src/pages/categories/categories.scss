@@ -21,4 +21,12 @@ page-categories {
       }
     }
   }
+  .location-bar
+  {
+    position: fixed;
+    .item-inner
+    {
+      border: none !important;
+    }
+  }
 }

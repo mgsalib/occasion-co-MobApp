@@ -3,6 +3,7 @@ import { IonicPageModule } from 'ionic-angular';
 import { CategoriesPage } from './categories';
 import { TranslateModule } from '@ngx-translate/core';
 import { ComponentsModule } from '../../components/components.module';
+import { IonicSelectableModule } from 'ionic-selectable';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { ComponentsModule } from '../../components/components.module';
   imports: [
     IonicPageModule.forChild(CategoriesPage),
     TranslateModule.forChild(),
-    ComponentsModule
+    ComponentsModule,
+    IonicSelectableModule
   ],
 })
 export class CategoriesPageModule { }

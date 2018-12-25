@@ -1,0 +1,69 @@
+<app-header [headerTxt]="productDetails.title" showCart="true"></app-header>
+
+<ion-content class="app-background">
+  <ion-grid class="padding-t-16 padding-r-16 padding-b-0 padding-l-16 fotter-margin">
+    <!-- image -->
+    <ion-row class="margin-b-16">
+      <ion-col col-12 class="market-card padding-0">
+        <ul class="margin-0 padding-0">
+          <!-- market image -->
+          <li class="margin-b-2">
+            <img [src]="imagePath + productDetails.imageFile" />
+          </li>
+          <!-- market name -->
+          <li class="margin-0">
+            <h6 class="font-16 margin-0 txt-white">
+              {{productDetails.title}}
+            </h6>
+          </li>
+        </ul>
+      </ion-col>
+    </ion-row>
+
+    <!-- about the market -->
+    <ion-row class="margin-b-16" *ngIf="productDetails.description !=  null">
+      <ion-col col-12 class="prod-info-widget padding-0">
+        <h6 class="txt-yellow font-14 margin-t-0 margin-b-8">
+          {{'prod-info.widget-title-1' | translate}}
+        </h6>
+
+        <p class="txt-gray font-12 margin-0">
+          {{productDetails.description}}
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <!-- price details -->
+    <ion-row class="margin-b-16">
+      <ion-col col-12 class="prod-info-widget padding-0">
+        <h6 class="txt-yellow font-14 margin-t-0 margin-b-8">
+          {{'prod-info.widget-title-3' | translate}}
+        </h6>
+
+        <div class="price-bar margin-b-16">
+          <!-- price, currancy and unit -->
+          <span class="font-24 txt-white">
+            <span>{{productDetails.price}}</span><span>{{productDetails.currency}}/kg</span>
+          </span>
+
+          <!-- increase and decrease amount  -->
+          <span class="unit-bar">
+            <button class="bg-transparent margin-0 padding-0 txt-yellow font-18">
+              <ion-icon ios="ios-add" md="md-add"></ion-icon>
+            </button>
+            <label class="txt-white font-16">01</label>
+            <button class="bg-transparent margin-0 padding-0 txt-yellow font-18">
+              <ion-icon ios="ios-remove" md="md-remove"></ion-icon>
+            </button>
+          </span>
+        </div>
+
+        <div>
+          <button class="button-field font-16 bg-yellow padding-h-16 margin-b-16 txt-primary" (click)="AddToCart()">
+            {{'prod-info.to-cart' | translate}}
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

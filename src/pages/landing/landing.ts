@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HttpBaseProvider, GlobalProvider } from "../../providers/providers";
+import { HttpBaseProvider, GlobalProvider, ConfigClass } from "../../providers/providers";
 import { Storage } from '@ionic/storage';
 
 /**
@@ -19,7 +19,8 @@ export class LandingPage {
 
   categories: any = [];
   savedCategories: any = [];
-
+  imagesPath: string = ConfigClass.getImagesPath;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private httpCall: HttpBaseProvider, private globals: GlobalProvider, private storage: Storage) {
     this.storage.get("savedCategories").then(result => {

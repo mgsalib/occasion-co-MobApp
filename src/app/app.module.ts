@@ -17,6 +17,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MediaCapture } from '@ionic-native/media-capture';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { FileTransfer } from '@ionic-native/file-transfer';
+import { IonicSelectableModule } from 'ionic-selectable';
+import { Geolocation } from '@ionic-native/geolocation';
+import { CallNumber } from '@ionic-native/call-number';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -35,6 +38,7 @@ export function createTranslateLoader(http: HttpClient) {
     IonicStorageModule.forRoot(),
     HttpClientModule,
     HttpModule,
+    IonicSelectableModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -64,7 +68,9 @@ export function createTranslateLoader(http: HttpClient) {
     AndroidPermissions,
     FileTransfer,
     SocialProvider,
-    Facebook
+    Facebook,
+    Geolocation,
+    CallNumber
   ]
 })
 export class AppModule { }
