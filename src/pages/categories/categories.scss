@@ -5,9 +5,9 @@ page-categories {
 
       >li {
         >img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px; 
+          width: 100%;
+          height: auto;
+          border-radius: 5px;
         }
 
         >h6,
@@ -21,12 +21,37 @@ page-categories {
       }
     }
   }
-  .location-bar
-  {
+
+  .location-bar {
     position: fixed;
-    .item-inner
-    {
+
+    .item-inner {
       border: none !important;
+    }
+  }
+}
+
+ionic-selectable-page {
+
+  ion-navbar,
+  ion-toolbar {
+    padding: 0px !important;
+  }
+
+  ion-title {
+    text-transform: capitalize;
+  }
+
+  .searchbar {
+    background: transparent !important;
+
+    ::placeholder {
+      color: map-get($colors, white) !important;
+    }
+
+    .searchbar-input {
+      background: map-get($colors, gray) !important;
+      color: map-get($colors, white) !important;
     }
   }
 }
