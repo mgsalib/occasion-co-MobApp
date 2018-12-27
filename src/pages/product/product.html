@@ -73,7 +73,7 @@
 
       <ng-container *ngFor="let item of products">
         <!-- item card -->
-        <ion-col col-6 class="prod-item padding-t-0 padding-r-8 padding-b-0 padding-l-0" (click)="openProductDetails(item)">
+        <ion-col col-6 class="prod-item padding-t-0 margin-b-8 padding-r-8 padding-b-0 padding-l-0" (click)="openProductDetails(item)">
           <img [src]="imagePath + item.imageFile" />
           <h6 class="txt-white font-14 margin-0"> {{item.title}}</h6>
           <!-- rate bar -->
