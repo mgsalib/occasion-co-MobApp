@@ -27,41 +27,7 @@ page-product-details {
       text-transform: capitalize;
     }
 
-    >ul {
-      list-style: none;
-
-      >li {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-content: center;
-        align-items: stretch;
-
-        >span {
-          width: 32px;
-          height: 32px;
-          order: 0;
-          flex: 0 1 auto;
-          align-self: center;
-          border-radius: 3px;
-          text-align: center;
-
-          >.icon {
-            line-height: 32px;
-            opacity: 0.7;
-          }
-        }
-
-        >label {
-          order: 0;
-          flex: 1 1 auto;
-          align-self: center;
-        }
-      }
-    }
-
-    .price-bar {
+    .unit-price {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
