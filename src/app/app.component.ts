@@ -12,7 +12,7 @@ import { Storage } from '@ionic/storage';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = "LandingPage";
+  rootPage: any = "StartSwiperPage";
   lastSelectedPage: string = "";
   pages: Array<{ title: string, component: any }>;
 

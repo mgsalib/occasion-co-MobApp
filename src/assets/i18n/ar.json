@@ -22,7 +22,11 @@
     "add": "إضافه",
     "title": "أوكيشن آند كو",
     "info": "أحدث تطبيق للهاتف النقال على أنظمة الاندرويد و الايفون فى المملكة ودول الخليج العربى لاقامة وتنظيم كل مايتعلق بالمناسبات وحفلات الزفاف",
-    "search": "بحث"
+    "search": "بحث",
+    "language": "اختر لغتك",
+    "currency": "اختر عملتك",
+    "lang-info": "select your favourite language",
+    "curr-info": "select your favourite currency"
   },
 
   "login": {

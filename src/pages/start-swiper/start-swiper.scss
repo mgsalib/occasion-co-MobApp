@@ -1,0 +1,21 @@
+page-start-swiper {
+  .scroll-content {
+    margin-top: 0px !important;
+  }
+
+  .start-swiper {
+    ion-slides {
+      ion-slide {
+        img {
+          width: 160px;
+        }
+
+        button {
+          width: 100%;
+          height: 45px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

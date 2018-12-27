@@ -63,22 +63,6 @@
           <ion-input type="tel" [(ngModel)]="phone" class="font-16 txt-yellow" placeholder="{{'general.enter' | translate}}{{'register.phone' | translate}}"></ion-input>
         </ion-item>
 
-        <ion-item class="input-field margin-b-8">
-          <ion-label class="font-12 txt-gray">Choose Country</ion-label>
-          <ion-select [(ngModel)]="my-country" class="font-16 txt-yellow">
-            <ion-option value="EG">Egypt</ion-option>
-            <ion-option value="SA">Saudi Arabia</ion-option>
-          </ion-select>
-        </ion-item>
-
-        <ion-item class="input-field margin-b-32">
-          <ion-label class="font-12 txt-gray">Currency Type</ion-label>
-          <ion-select [(ngModel)]="my-currancy" class="font-16 txt-yellow">
-            <ion-option value="EG">EGP - Egypt Pound</ion-option>
-            <ion-option value="SA">SAR - Saudi Arabia Riyal</ion-option>
-          </ion-select>
-        </ion-item>
-
         <!-- login action button -->
         <button class="button-field font-16 bg-yellow padding-h-16 txt-primary" (click)="register()">{{'register.title'
           | translate}}</button>

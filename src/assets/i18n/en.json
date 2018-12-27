@@ -23,7 +23,12 @@
     "add": "Add",
     "title": "Occasion and Co",
     "info": "The latest mobile application on Android and iPhone  in the KSA and the Gulf countries to set up and organize all events and weddings",
-    "search": "Search"
+    "search": "Search",
+    "language": "choose your language",
+    "lang-info": "select your favourite language",
+    "currency": "choose your currency",
+    "curr-info": "select your favourite currency"
+
   },
 
   "login": {
