@@ -1,12 +1,16 @@
-<app-header headerTxt="contact.title" showCart="true"></app-header>
+<app-header headerTxt="main-menu.contacts" showCart="true"></app-header>
 
 <ion-content class="app-background">
   <ion-grid class="padding-16 margin-t-32">
     <ion-row>
       <ion-col text-center class="padding-0">
-        <p class="margin-t-0 margin-b-8 font-14 txt-white">00966550058086</p>
-        <p class="margin-t-0 margin-b-8 font-14 txt-white">00966596979984</p>
-        <p class="margin-t-0 margin-b-8 font-14 txt-white">occasion1440@gmail.com</p>
+        <p class="margin-t-0 margin-b-8 font-14 txt-white" (click)="call('00966550058086')">00966550058086</p>
+        <p class="margin-t-0 margin-b-8 font-14 txt-white" (click)="call('00966596979984')">00966596979984</p>
+        <p class="margin-t-0 margin-b-8 font-14 txt-white">
+          <a href="mailto:occasion1440@gmail.com" class="txt-white">
+          occasion1440@gmail.com
+          </a>
+        </p>
       </ion-col>
     </ion-row>
   </ion-grid>
