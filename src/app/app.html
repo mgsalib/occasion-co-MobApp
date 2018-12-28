@@ -15,8 +15,8 @@
       </span>
       <ion-buttons>
         <button ion-button icon-only menuClose clear>
-            <ion-icon name="ios-close-circle-outline" color="light"></ion-icon>
-          </button>
+          <ion-icon name="ios-close-circle-outline" color="light"></ion-icon>
+        </button>
       </ion-buttons>
     </div>
 
@@ -26,18 +26,31 @@
 
     <!-- menu list -->
     <ion-list class="menu-list margin-b-16 padding-h-16">
-      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.account' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.account'
+        | translate}}</button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.offers' | translate}}</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.order' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.order'
+        | translate}}</button>
     </ion-list>
 
     <ion-list class="menu-list margin-b-16 padding-h-16">
       <ion-list-header class="menu-list-header font-16 padding-0 txt-primary">{{'main-menu.info' | translate}}</ion-list-header>
 
+<<<<<<< HEAD
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('AboutUsPage')">{{'main-menu.about-us'
+        | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('TermsPage')">{{'main-menu.terms'
+        | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('PrivacyPage')">{{'main-menu.privacy'
+        | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('ContactPage')">{{'main-menu.contacts'
+        | translate}}</button>
+=======
       <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('AboutUsPage')">{{'main-menu.about-us' | translate}}</button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('TermsPage')">{{'main-menu.terms' | translate}}</button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('PrivacyPage')">{{'main-menu.privacy' | translate}}</button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('ContactPage')">{{'main-menu.contacts' | translate}}</button>
+>>>>>>> de212c3cc9f6a4ffa6eed95682726338a1f70789
     </ion-list>
 
     <ion-list class="menu-list margin-b-16 padding-h-16">
@@ -55,7 +68,8 @@
       <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCurrency != 'undefined'"
         (click)="getCurrencies()">
         {{'main-menu.currency' | translate}}
-        <ion-note item-end class="menu-list-note txt-green">{{globals.userSettings.selectedCurrency.name}} - {{globals.userSettings.selectedCurrency.symbol}}</ion-note>
+        <ion-note item-end class="menu-list-note txt-green">{{globals.userSettings.selectedCurrency.name}} -
+          {{globals.userSettings.selectedCurrency.symbol}}</ion-note>
       </button>
     </ion-list>
 
@@ -80,8 +94,8 @@
       </span>
       <ion-buttons>
         <button ion-button icon-only menuClose clear>
-            <ion-icon name="ios-close-circle-outline" color="light"></ion-icon>
-          </button>
+          <ion-icon name="ios-close-circle-outline" color="light"></ion-icon>
+        </button>
       </ion-buttons>
     </div>
 
@@ -91,9 +105,11 @@
 
     <!-- menu list -->
     <ion-list class="menu-list margin-b-16 padding-h-16">
-      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.account' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.account'
+        | translate}}</button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.offers' | translate}}</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.order' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.order'
+        | translate}}</button>
     </ion-list>
 
     <ion-list class="menu-list margin-b-16 padding-h-16">
@@ -120,7 +136,8 @@
       <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCurrency != 'undefined'"
         (click)="getCurrencies()">
         {{'main-menu.currency' | translate}}
-        <ion-note item-end class="menu-list-note txt-green">{{globals.userSettings.selectedCurrency.name}} - {{globals.userSettings.selectedCurrency.symbol}}</ion-note>
+        <ion-note item-end class="menu-list-note txt-green">{{globals.userSettings.selectedCurrency.name}} -
+          {{globals.userSettings.selectedCurrency.symbol}}</ion-note>
       </button>
     </ion-list>
 
