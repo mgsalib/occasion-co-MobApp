@@ -13,8 +13,6 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = "StartSwiperPage";
-  lastSelectedPage: string = "";
-  pages: Array<{ title: string, component: any }>;
   countries: any = [];
   currencies: any = [];
 
@@ -25,10 +23,6 @@ export class MyApp {
     private alert: AlertProvider, private events: Events) {
 
     this.initializeApp();
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'login.login', component: "LoginPage" }
-    ];
   }
 
   initializeApp() {
@@ -66,15 +60,6 @@ export class MyApp {
         }
       });
     });
-  }
-
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    // if (this.lastSelectedPage != page.component) {
-    this.lastSelectedPage = page.component;
-    this.nav.setRoot(page.component);
-    // }
   }
 
   logout() {
@@ -177,6 +162,10 @@ export class MyApp {
       this.globals.userSettings.selectedCurrency = result;
       this.storage.set("userSettings", this.globals.userSettings);
     });
+  }
+
+  openPage(pageName) {
+    this.nav.setRoot(pageName);
   }
 }
 

@@ -30,9 +30,9 @@
     <ion-list class="menu-list margin-b-16 padding-h-16">
       <ion-list-header class="menu-list-header font-16 padding-0 txt-primary">{{'main-menu.info' | translate}}</ion-list-header>
 
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.about-us' | translate}}</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.terms' | translate}}</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.privacy' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('AboutUsPage')">{{'main-menu.about-us' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('TermsPage')">{{'main-menu.terms' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('PrivacyPage')">{{'main-menu.privacy' | translate}}</button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.contacts' | translate}}</button>
     </ion-list>
 
@@ -43,11 +43,13 @@
         {{'main-menu.language' | translate}}
         <ion-note item-end class="menu-list-note txt-green">{{'main-menu.lang-name' | translate}}</ion-note>
       </button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCountry != 'undefined'" (click)="getCountries()">
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCountry != 'undefined'"
+        (click)="getCountries()">
         {{'main-menu.country' | translate}}
         <ion-note item-end class="menu-list-note txt-green">{{globals.userSettings.selectedCountry.name}}</ion-note>
       </button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCurrency != 'undefined'" (click)="getCurrencies()">
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCurrency != 'undefined'"
+        (click)="getCurrencies()">
         {{'main-menu.currency' | translate}}
         <ion-note item-end class="menu-list-note txt-green">{{globals.userSettings.selectedCurrency.name}} - {{globals.userSettings.selectedCurrency.symbol}}</ion-note>
       </button>
@@ -89,9 +91,9 @@
     <ion-list class="menu-list margin-b-16 padding-h-16">
       <ion-list-header class="menu-list-header font-16 padding-0 txt-primary">{{'main-menu.info' | translate}}</ion-list-header>
 
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.about-us' | translate}}</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.terms' | translate}}</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.privacy' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('AboutUsPage')">{{'main-menu.about-us' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('TermsPage')">{{'main-menu.terms' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" menuClose (click)="openPage('PrivacyPage')">{{'main-menu.privacy' | translate}}</button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-gray">{{'main-menu.contacts' | translate}}</button>
     </ion-list>
 
@@ -102,11 +104,13 @@
         {{'main-menu.language' | translate}}
         <ion-note item-end class="menu-list-note txt-green">{{'main-menu.lang-name' | translate}}</ion-note>
       </button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCountry != 'undefined'" (click)="getCountries()">
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCountry != 'undefined'"
+        (click)="getCountries()">
         {{'main-menu.country' | translate}}
         <ion-note item-end class="menu-list-note txt-green">{{globals.userSettings.selectedCountry.name}}</ion-note>
       </button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCurrency != 'undefined'" (click)="getCurrencies()">
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCurrency != 'undefined'"
+        (click)="getCurrencies()">
         {{'main-menu.currency' | translate}}
         <ion-note item-end class="menu-list-note txt-green">{{globals.userSettings.selectedCurrency.name}} - {{globals.userSettings.selectedCurrency.symbol}}</ion-note>
       </button>
