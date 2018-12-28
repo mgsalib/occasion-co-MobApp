@@ -26,7 +26,8 @@
 
     <!-- menu list -->
     <ion-list class="menu-list margin-b-16 padding-h-16">
-      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.account'
+<button ion-item class="menu-list-content font-16 padding-0 txt-primary" menuClose (click)="openPage('MyAccountPage')"
+  *ngIf="globals.isUserLoggedIn">{{'main-menu.account'
         | translate}}</button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.offers' | translate}}</button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.order'
