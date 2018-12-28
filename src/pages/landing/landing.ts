@@ -18,21 +18,17 @@ import { Storage } from '@ionic/storage';
 export class LandingPage {
 
   categories: any = [];
-  savedCategories: any = [];
   imagesPath: string = ConfigClass.getImagesPath;
-  
+  tempCategories: any = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private httpCall: HttpBaseProvider, private globals: GlobalProvider, private storage: Storage) {
-    this.storage.get("savedCategories").then(result => {
-      if (result) {
-        this.savedCategories = result;
-      }
-    });
   }
 
   ionViewDidLoad() {
     this.httpCall.get(this.globals.servicesURL.categories).subscribe(result => {
       this.categories = result;
+      this.tempCategories = result;
     });
   }
 
@@ -41,4 +37,13 @@ export class LandingPage {
     this.navCtrl.push("CategoriesPage", item);
   }
 
+  filterItems(ev: any) {
+    let val = ev.target.value;
+    this.categories = this.tempCategories;
+    if (val && val.trim() != '') {
+      this.categories = this.categories.filter(item => {
+        return ((item.title != null && item.title.toLowerCase().indexOf(val.toLowerCase()) > -1) || (item.description != null && item.description.toLowerCase().indexOf(val.toLowerCase()) > -1));
+      });
+    }
+  }
 }

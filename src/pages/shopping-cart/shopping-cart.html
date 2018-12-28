@@ -10,46 +10,24 @@
           <span>{{'cart.step-no-01' | translate}}</span>
           <span>{{'cart.step-name-01' | translate}}</span>
         </ion-segment-button>
-        <!-- <ion-segment-button value="step-02" class="txt-white bg-primary">
-          <span>{{'cart.step-no-02' | translate}}</span>
-          <span>{{'cart.step-name-02' | translate}}</span>
-        </ion-segment-button> -->
-        <ion-segment-button value="confirm-page" class="txt-white bg-primary">
+        <ion-segment-button value="confirm-page" class="txt-white bg-primary disable">
           <span>{{'cart.step-no-02' | translate}}</span>
           <span>{{'cart.step-name-03' | translate}}</span>
         </ion-segment-button>
       </ion-segment>
     </ion-row>
-<!-- 
-    <ion-list [ngSwitch]="PaymentSteps" *ngFor="let item of globals.shoppingCart; let i = index">
-      <ion-item>
-        <ion-avatar item-start>
-          <img [src]="imagePath + item.image">
-        </ion-avatar>
-        <h6 class="font-16 txt-white margin-t-0 margin-b-8">{{item.name}}</h6>
-        <span class="unit-bar margin-b-8">
-                <button class="bg-transparent margin-0 padding-0 txt-yellow font-18" (click)="add(index)">
-                  <ion-icon name="add"></ion-icon>
-                </button>
-          <label class="txt-white font-16">{{item.amount}}</label>
-          <button class="bg-transparent margin-0 padding-0 txt-yellow font-18" (click)="remove(index)">
-                  <ion-icon name="remove"></ion-icon>
-                </button>
-          </span>
-      </ion-item>
-    </ion-list> -->
 
     <!-- segment content row -->
     <ion-row [ngSwitch]="PaymentSteps" *ngFor="let item of globals.shoppingCart; let i = index">
       <!-- step 01 -->
-       <ion-col col-12 class="padding-0" *ngSwitchCase="'order-list'">
+      <ion-col col-12 class="padding-0" *ngSwitchCase="'order-list'">
         <ion-list class="list-item">
 
           <div ion-item class="list-item-content margin-b-16">
             <ion-avatar item-start class="margin-0"><img [src]="imagePath + item.image"></ion-avatar>
             <div>
               <h6 class="font-16 txt-white margin-t-0 margin-b-8">{{item.name}}</h6>
-              <ion-icon name="close" class="remove" (click)="removeItem(i)"></ion-icon>
+              <ion-icon name="trash" class="remove" (click)="removeItem(i)"></ion-icon>
               <span class="unit-bar margin-b-8">
                 <button class="bg-transparent margin-0 padding-0 txt-yellow font-18" (click)="add(i)">
                   <ion-icon name="add"></ion-icon>
@@ -59,18 +37,13 @@
                   <ion-icon name="remove"></ion-icon>
                 </button>
           </span>
-          <label class="prod-price txt-white font-24">
-                 {{item.price * item.amount}} {{item.currency}}
+              <label class="prod-price txt-white font-24">
+                {{item.price * item.amount}} {{item.currency}}
               </label>
-          </div>
+            </div>
           </div>
         </ion-list>
-      </ion-col> 
-
-      <!-- step 02 -->
-      <!-- <ion-col col-12 class="padding-0" *ngSwitchCase="'step-02'">
-        Step 02
-      </ion-col> -->
+      </ion-col>
 
       <!-- step 03 -->
       <ion-col col-12 class="padding-0" *ngSwitchCase="'confirm-page'">
@@ -97,15 +70,15 @@
 </ion-content>
 
 <!-- total price bar -->
-<ion-grid class="price-bar bg-white padding-8">
+<ion-grid class="price-bar bg-white padding-8" *ngIf="globals.shoppingCart.length > 0">
   <ion-row>
     <ion-col col-5 class="padding-h-8 padding-t-0 padding-b-0">
-      <button class="bg-yellow txt-primary font-16">{{'cart.pay-now' | translate}}</button>
+      <button class="bg-yellow txt-primary font-16" (click)="pay()">{{'cart.pay-now' | translate}}</button>
     </ion-col>
 
     <ion-col col-7 class="padding-h-8 padding-t-0 padding-b-0">
-      <span class="txt-gray bold-txt font-30">egp</span>
-      <span class="txt-gray bold-txt font-30">1425</span>
+      <span class="txt-gray bold-txt font-30">{{allPrices}}</span>
+      <span class="txt-gray bold-txt font-30"> {{globals.shoppingCart[0].currency}}</span>
     </ion-col>
   </ion-row>
 </ion-grid>

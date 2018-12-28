@@ -44,10 +44,6 @@ export class RegisterFormPage {
     }
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RegisterFormPage');
-  }
-
   openConfirmRegister() {
     this.navCtrl.push("RegisterConfirmPage");
   }
@@ -56,17 +52,21 @@ export class RegisterFormPage {
     if (this.validateInputs()) {
       if (this.mediaSelected) {
         this.httpCall.uploadAttachment(this.mediaFile).then(result => {
-          debugger
+          this.doRegister(result);
         });
       }
       else {
-        this.doRegister();
+        this.doRegister(this.photo);
       }
     }
   }
 
-  doRegister() {
-    var data = "UserName=" + this.username + "&Password=" + this.password + "&Email=" + this.email + "&FirstName=" + this.firstname + "&LastName=" + this.lastname + "&Phone=" + this.phone + "&Mobile=" + this.mobile;
+  doRegister(image) {
+    if (image.indexOf("assets") > -1) {
+      image = "";
+    }
+    var data = "UserName=" + this.username + "&Password=" + this.password + "&Email=" + this.email + "&FirstName=" + this.firstname + "&LastName=" + this.lastname +
+      "&Phone=" + this.phone + "&Mobile=" + this.mobile + "&ImageFile=" + image;
     this.httpCall.post(this.globals.servicesURL.register, "", data).subscribe(result => {
       this.globals.userId = result;
       this.storage.set("userId_occ", result);
@@ -140,7 +140,7 @@ export class RegisterFormPage {
       .then((data: MediaFile[]) => {
         this.mediaSelected = true;
         this.mediaFile = data[0];
-         this.photo = this.mediaFile.fullPath;
+        this.photo = this.mediaFile.fullPath;
       },
       (err: CaptureError) => console.error(err)
       );

@@ -3,7 +3,7 @@ import { Nav, Platform, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TranslateService } from '@ngx-translate/core';
-import { AlertProvider, GlobalProvider, TranslateProvider, HttpBaseProvider, alertFields, alertOption } from "../providers/providers";
+import { AlertProvider, GlobalProvider, TranslateProvider, HttpBaseProvider, alertFields, alertOption, ConfigClass } from "../providers/providers";
 import { Storage } from '@ionic/storage';
 
 @Component({
@@ -59,6 +59,12 @@ export class MyApp {
           this.globals.isUserLoggedIn = true;
         }
       });
+
+      this.storage.get("shoppingCart").then(result => {
+        if (result) {
+          this.globals.shoppingCart = result;
+        }
+      });
     });
   }
 
@@ -81,7 +87,17 @@ export class MyApp {
   }
 
   getImagePath() {
-    return (this.globals.userInfo.imageFile != null) ? this.globals.userInfo.imageFile : 'assets/imgs/Cat-type-01.jpg';
+    if (this.globals.userInfo.imageFile != null) {
+      if (this.globals.userInfo.imageFile.indexOf("graph.facebook") > -1) {
+        return this.globals.userInfo.imageFile;
+      }
+      else {
+        return ConfigClass.getImagesPath + this.globals.userInfo.imageFile;
+      }
+    }
+    else {
+      return "assets/imgs/empty-profile.png";
+    }
   }
 
   changeLang() {

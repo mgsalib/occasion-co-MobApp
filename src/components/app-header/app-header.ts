@@ -30,12 +30,6 @@ export class AppHeaderComponent {
   }
 
   cart() {
-    if (this.globals.isUserLoggedIn == true) {
-      this.navCtrl.push("ShoppingCartPage");
-    }
-    else {
-      this.navCtrl.push("LoginPage", { fromCart: true });
-    }
+    this.navCtrl.push("ShoppingCartPage");
   }
-
 }

@@ -8,4 +8,9 @@ app-header {
   .toolbar-title {
     color: map-get($colors, yellow);
   }
+  .badge
+  {
+    color: color($colors, primary);
+    background: color($colors, yellow);
+  }
 }

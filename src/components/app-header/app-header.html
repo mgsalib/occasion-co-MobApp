@@ -20,6 +20,7 @@
       </button>
       <button ion-button icon-only (click)="cart()" *ngIf="showCart">
         <ion-icon name="cart" color="yellow"></ion-icon>
+          <ion-badge item-end *ngIf="globals.shoppingCart.length > 0" class="badge">{{globals.shoppingCart.length}}</ion-badge>
       </button>
     </ion-buttons>
 
