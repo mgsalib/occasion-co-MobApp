@@ -20,6 +20,7 @@ import { FileTransfer } from '@ionic-native/file-transfer';
 import { IonicSelectableModule } from 'ionic-selectable';
 import { Geolocation } from '@ionic-native/geolocation';
 import { CallNumber } from '@ionic-native/call-number';
+import { StarRatingModule } from 'ionic3-star-rating';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -31,6 +32,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
+    StarRatingModule,
     IonicModule.forRoot(MyApp, {
       backButtonText: '',
       mode: "ios"

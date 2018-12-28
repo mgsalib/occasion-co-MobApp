@@ -3,6 +3,7 @@ import { IonicPageModule } from 'ionic-angular';
 import { ProductPage } from './product';
 import { TranslateModule } from '@ngx-translate/core';
 import { ComponentsModule } from '../../components/components.module';
+import { StarRatingModule } from 'ionic3-star-rating';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { ComponentsModule } from '../../components/components.module';
   imports: [
     IonicPageModule.forChild(ProductPage),
     TranslateModule.forChild(),
-    ComponentsModule
+    ComponentsModule,
+    StarRatingModule
   ],
 })
-export class ProductPageModule {}
+export class ProductPageModule { }

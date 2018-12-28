@@ -541,9 +541,9 @@
     }
   }
 
-  .col:nth-child(1) {
-    border-right: 1px solid map-get($colors, primary);
-  }
+  // .col:nth-child(1) {
+  //   border-right: 1px solid map-get($colors, primary);
+  // }
 }
 
 .fotter-margin {
@@ -627,4 +627,10 @@
       text-transform: uppercase;
     }
   }
+}
+
+.disable
+{
+  opacity: .5;
+  pointer-events: none;
 }

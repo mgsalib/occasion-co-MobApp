@@ -20,38 +20,52 @@
         </ion-segment-button>
       </ion-segment>
     </ion-row>
+<!-- 
+    <ion-list [ngSwitch]="PaymentSteps" *ngFor="let item of globals.shoppingCart; let i = index">
+      <ion-item>
+        <ion-avatar item-start>
+          <img [src]="imagePath + item.image">
+        </ion-avatar>
+        <h6 class="font-16 txt-white margin-t-0 margin-b-8">{{item.name}}</h6>
+        <span class="unit-bar margin-b-8">
+                <button class="bg-transparent margin-0 padding-0 txt-yellow font-18" (click)="add(index)">
+                  <ion-icon name="add"></ion-icon>
+                </button>
+          <label class="txt-white font-16">{{item.amount}}</label>
+          <button class="bg-transparent margin-0 padding-0 txt-yellow font-18" (click)="remove(index)">
+                  <ion-icon name="remove"></ion-icon>
+                </button>
+          </span>
+      </ion-item>
+    </ion-list> -->
 
     <!-- segment content row -->
-    <ion-row [ngSwitch]="PaymentSteps">
+    <ion-row [ngSwitch]="PaymentSteps" *ngFor="let item of globals.shoppingCart; let i = index">
       <!-- step 01 -->
-      <ion-col col-12 class="padding-0" *ngSwitchCase="'order-list'">
+       <ion-col col-12 class="padding-0" *ngSwitchCase="'order-list'">
         <ion-list class="list-item">
 
-          <button ion-item class="list-item-content margin-b-16">
-            <ion-avatar item-start class="margin-0"><img src="../../assets/imgs/cat-image-01.png"></ion-avatar>
+          <div ion-item class="list-item-content margin-b-16">
+            <ion-avatar item-start class="margin-0"><img [src]="imagePath + item.image"></ion-avatar>
             <div>
-              <!-- product name -->
-              <h6 class="font-16 txt-white margin-t-0 margin-b-8">product name</h6>
-
-              <!-- increase and decrease amount  -->
+              <h6 class="font-16 txt-white margin-t-0 margin-b-8">{{item.name}}</h6>
+              <ion-icon name="close" class="remove" (click)="removeItem(i)"></ion-icon>
               <span class="unit-bar margin-b-8">
-                <button class="bg-transparent margin-0 padding-0 txt-yellow font-18">
-                  <ion-icon ios="ios-add" md="md-add"></ion-icon>
+                <button class="bg-transparent margin-0 padding-0 txt-yellow font-18" (click)="add(i)">
+                  <ion-icon name="add"></ion-icon>
                 </button>
-                <label class="txt-white font-16">01</label>
-                <button class="bg-transparent margin-0 padding-0 txt-yellow font-18">
-                  <ion-icon ios="ios-remove" md="md-remove"></ion-icon>
+          <label class="txt-white font-16">{{item.amount}}</label>
+          <button class="bg-transparent margin-0 padding-0 txt-yellow font-18" (click)="remove(i)">
+                  <ion-icon name="remove"></ion-icon>
                 </button>
-              </span>
-
-              <!-- final price -->
-              <label class="prod-price txt-white font-24">
-                EGP 125
+          </span>
+          <label class="prod-price txt-white font-24">
+                 {{item.price * item.amount}} {{item.currency}}
               </label>
-            </div>
-          </button>
+          </div>
+          </div>
         </ion-list>
-      </ion-col>
+      </ion-col> 
 
       <!-- step 02 -->
       <!-- <ion-col col-12 class="padding-0" *ngSwitchCase="'step-02'">

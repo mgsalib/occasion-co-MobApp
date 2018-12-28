@@ -48,18 +48,18 @@
 
           <!-- increase and decrease amount  -->
           <span class="unit-bar">
-            <button class="bg-transparent margin-0 padding-0 txt-yellow font-18">
-              <ion-icon ios="ios-add" md="md-add"></ion-icon>
+            <button class="bg-transparent margin-0 padding-0 txt-yellow font-18" (click)="add()">
+              <ion-icon name="add"></ion-icon>
             </button>
-            <label class="txt-white font-16">01</label>
-            <button class="bg-transparent margin-0 padding-0 txt-yellow font-18">
-              <ion-icon ios="ios-remove" md="md-remove"></ion-icon>
+            <label class="txt-white font-16">{{amount}}</label>
+            <button class="bg-transparent margin-0 padding-0 txt-yellow font-18" (click)="remove()">
+              <ion-icon name="remove"></ion-icon>
             </button>
           </span>
         </div>
 
         <div>
-          <button class="button-field font-16 bg-yellow padding-h-16 margin-b-16 txt-primary" (click)="AddToCart()">
+          <button class="button-field font-16 bg-yellow padding-h-16 margin-b-16 txt-primary" [ngClass]="amount < 1 ? 'disable':''" (click)="addToCart()">
             {{'prod-info.to-cart' | translate}}
           </button>
         </div>

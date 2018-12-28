@@ -5,22 +5,21 @@
     <!-- welcome slide -->
     <ion-slide>
       <img src="assets/imgs/start.svg" class="margin-b-16" />
-      <h1 text-uppercase class="bold-txt txt-primary font-30 margin-t-0 margin-b-16">{{'general.title' | translate}}</h1>
-      <p text-capitalize class="font-14 margin-b-32 margin-t-0 padding-h-16 txt-gray">{{'general.info' | translate}}</p>
-      <button text-uppercase class="margin-0 margin-b-32 padding-h-16 font-16 bg-yellow txt-primary">plan your settings</button>
+      <h1 text-uppercase class="bold-txt txt-primary font-30 margin-t-0 margin-b-16">{{'start.title' | translate}}</h1>
+      <p text-capitalize class="font-14 margin-b-32 margin-t-0 padding-h-16 txt-gray">{{'start.info' | translate}}</p>
+      <button text-uppercase class="margin-0 margin-b-32 padding-h-16 font-16 bg-yellow txt-primary">{{'start.plan' | translate}}</button>
     </ion-slide>
 
     <!-- choose language -->
     <ion-slide>
       <img src="assets/imgs/language.svg" class="margin-b-16" />
-      <h1 text-uppercase class="bold-txt txt-primary font-30 margin-t-0 margin-b-16">{{'general.language' | translate}}</h1>
-      <p text-capitalize class="font-14 margin-b-32 margin-t-0 padding-h-16 txt-gray">{{'general.lang-info' |
-        translate}}</p>
+      <h1 text-uppercase class="bold-txt txt-primary font-30 margin-t-0 margin-b-16">{{'start.language' | translate}}</h1>
+      <p text-capitalize class="font-14 margin-b-32 margin-t-0 padding-h-16 txt-gray">{{'start.lang-info' | translate}}
+      </p>
       <ion-item class="input-field margin-b-32">
-        <ion-label class="font-12 txt-gray">Choose Country</ion-label>
-        <ion-select [(ngModel)]="my-country" class="font-16 txt-yellow">
-          <ion-option value="EG">Egypt</ion-option>
-          <ion-option value="SA">Saudi Arabia</ion-option>
+        <ion-label class="font-12 txt-gray">{{'start.choose-country' | translate}}</ion-label>
+        <ion-select [(ngModel)]="selectedCountry" class="font-16 txt-yellow">
+          <ion-option *ngFor="let item of countries" [value]="item">{{item.name}}</ion-option>
         </ion-select>
       </ion-item>
     </ion-slide>
@@ -28,18 +27,17 @@
     <!-- choose curruncy -->
     <ion-slide>
       <img src="assets/imgs/curruncy.svg" class="margin-b-16" />
-      <h1 text-uppercase class="bold-txt txt-primary font-30 margin-t-0 margin-b-16">{{'general.currency' | translate}}</h1>
-      <p text-capitalize class="font-14 margin-b-32 margin-t-0 padding-h-16 txt-gray">{{'general.curr-info' |
-        translate}}</p>
+      <h1 text-uppercase class="bold-txt txt-primary font-30 margin-t-0 margin-b-16">{{'start.currency' | translate}}</h1>
+      <p text-capitalize class="font-14 margin-b-32 margin-t-0 padding-h-16 txt-gray">{{'start.curr-info' | translate}}
+      </p>
       <ion-item class="input-field margin-b-32">
-        <ion-label class="font-12 txt-gray">Currency Type</ion-label>
-        <ion-select [(ngModel)]="my-currancy" class="font-16 txt-yellow">
-          <ion-option value="EG">EGP - Egypt Pound</ion-option>
-          <ion-option value="SA">SAR - Saudi Arabia Riyal</ion-option>
+        <ion-label class="font-12 txt-gray">{{'start.choose-currency' | translate}}</ion-label>
+        <ion-select [(ngModel)]="selectedCurrency" class="font-16 txt-yellow">
+          <ion-option *ngFor="let item of currencies" [value]="item">{{item.name}} - {{item.symbol}}</ion-option>
         </ion-select>
       </ion-item>
+      <button text-uppercase class="margin-0 margin-b-32 padding-h-16 font-16 bg-yellow txt-primary" [ngClass]="(selectedCurrency == '' || selectedCountry == '')?'disable':''" (click)="start()">{{'general.save' | translate}}</button>
     </ion-slide>
-
   </ion-slides>
 
 </ion-content>

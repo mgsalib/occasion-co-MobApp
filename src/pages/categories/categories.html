@@ -2,9 +2,9 @@
 
 <ion-content class="app-background">
   <ion-grid class="padding-t-16 padding-r-16 padding-b-0 padding-l-16 fotter-margin">
-    <ion-row>
+    <ion-row *ngFor="let market of markets">
       <!-- market loop row -->
-      <ion-col col-12 class="market-card padding-0 margin-b-32" (click)="openProducts(market)" *ngFor="let market of markets">
+      <ion-col col-12 class="market-card padding-0 margin-b-32" (click)="openProducts(market)">
         <ul class="margin-0 padding-0">
           <!-- market image -->
           <li class="margin-b-2">
@@ -22,24 +22,25 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-item class="location-bar bg-white padding-8">
-    <ion-label>{{'prod-info.place' | translate}}</ion-label>
+  <!-- <ion-item class="location-bar bg-white padding-8">
+     <ion-label>{{'prod-info.place' | translate}}</ion-label>
     <ionic-selectable item-content [(ngModel)]="selectedCountry" [items]="countries" itemValueField="countryCode" itemTextField="name"
       [canSearch]="true" [isMultiple]="false" (onChange)="countryChanged($event)">
-    </ionic-selectable>
-  </ion-item>
+    </ionic-selectable> 
+  </ion-item> -->
 </ion-content>
 <!-- location bar -->
-<!-- <ion-grid class="location-bar bg-white padding-8">
+ <ion-grid class="location-bar bg-white padding-8">
   <ion-row>
-    <ion-col col-6 class="padding-h-8 padding-t-0 padding-b-0" (click)="getByLocation()">
+    <!-- <ion-col col-6 class="padding-h-8 padding-t-0 padding-b-0" (click)="getByLocation()">
       <img src="assets/imgs/NearestToYou.svg" height="32" class="margin-r-8" />
       <span class="txt-primary bold-txt">{{'prod-info.nearst' | translate}}</span>
-    </ion-col>
+    </ion-col> -->
 
-    <ion-col col-6 class="padding-h-8 padding-t-0 padding-b-0" (click)="openCountries()">
+     <ion-col class="padding-h-8 padding-t-0 padding-b-0" (click)="getCities()">
       <img src="assets/imgs/ChoosePlace.svg" height="32" class="margin-r-8" />
-      <span class="txt-primary bold-txt">{{'prod-info.place' | translate}}</span>
+      <span class="txt-primary bold-txt" *ngIf="globals.userSettings.selectedCity.name == ''">{{'prod-info.place' | translate}}</span>
+      <span class="txt-primary bold-txt" *ngIf="globals.userSettings.selectedCity.name != ''">{{globals.userSettings.selectedCity.name}}</span>
     </ion-col>
   </ion-row>
-</ion-grid> -->
+</ion-grid> 

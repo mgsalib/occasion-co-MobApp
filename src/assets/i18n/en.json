@@ -21,16 +21,8 @@
     "please": "Please ",
     "edit": "Edit",
     "add": "Add",
-    "title": "Occasion and Co",
-    "info": "The latest mobile application on Android and iPhone  in the KSA and the Gulf countries to set up and organize all events and weddings",
-    "search": "Search",
-    "language": "choose your language",
-    "lang-info": "select your favourite language",
-    "currency": "choose your currency",
-    "curr-info": "select your favourite currency"
-
+    "search": "Search"
   },
-
   "login": {
     "login": "Login",
     "new-account": "New Account",
@@ -40,7 +32,6 @@
     "remember-me": "remember username",
     "forget-password": "forget password"
   },
-
   "register": {
     "title": "Register",
     "username": "Username",
@@ -54,7 +45,6 @@
     "email-error": "Email not valid",
     "mobile": "Mobile"
   },
-
   "forget": {
     "title": "Forget Password",
     "message": "enter your email address to change your password",
@@ -62,11 +52,9 @@
     "succ": "Your password has been sent to your registered email",
     "error": "Email not valid, please enter valid email"
   },
-
   "landing": {
     "title": "Welcome!"
   },
-
   "main-menu": {
     "logout": "logout",
     "account": "my account",
@@ -85,15 +73,12 @@
     "count-name": "egypt",
     "egp": "egp"
   },
-
   "cat": {
     "title": "category name"
   },
-
   "prod": {
     "title": "market name"
   },
-
   "prod-info": {
     "widget-title-1": "about the market",
     "widget-title-2": "contact details",
@@ -103,7 +88,6 @@
     "nearst": "nearst to you",
     "place": "choose place"
   },
-
   "cart": {
     "title": "shopping cart",
     "step-no-01": "01",
@@ -114,7 +98,6 @@
     "step-name-03": "confirmation",
     "pay-now": "pay now"
   },
-
   "success": {
     "title": "confirmation",
     "create-account": "your account was created successfully",
@@ -138,5 +121,16 @@
     "photography-shops": "photography shops",
     "travel": "travel",
     "others": "And others"
+  },
+  "start": {
+    "choose-country": "Choose Country",
+    "choose-currency": "Choose Currency",
+    "language": "Choose your Country",
+    "lang-info": "Select your favourite Country",
+    "currency": "Choose your currency",
+    "curr-info": "Select your favourite currency",
+    "title": "Occasion and Co",
+    "info": "The latest mobile application on Android and iPhone  in the KSA and the Gulf countries to set up and organize all events and weddings",
+    "plan": "Plan your settings"
   }
 }

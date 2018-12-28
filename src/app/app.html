@@ -6,7 +6,7 @@
     <!-- user widget -->
     <div class="user-widget margin-t-16 margin-b-16 padding-l-16 padding-b-8" *ngIf="globals.isUserLoggedIn">
       <span>
-        <img src="../assets/imgs/Cat-type-01.jpg" />
+        <img [src]="getImagePath()" />
       </span>
 
       <span class="padding-l-8">
@@ -22,9 +22,9 @@
 
     <!-- menu list -->
     <ion-list class="menu-list margin-b-16 padding-h-16">
-      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.account' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.account' | translate}}</button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.offers' | translate}}</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.order' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.order' | translate}}</button>
     </ion-list>
 
     <ion-list class="menu-list margin-b-16 padding-h-16">
@@ -43,13 +43,13 @@
         {{'main-menu.language' | translate}}
         <ion-note item-end class="menu-list-note txt-green">{{'main-menu.lang-name' | translate}}</ion-note>
       </button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCountry != 'undefined'" (click)="getCountries()">
         {{'main-menu.country' | translate}}
-        <ion-note item-end class="menu-list-note txt-green">{{'main-menu.count-name' | translate}}</ion-note>
+        <ion-note item-end class="menu-list-note txt-green">{{globals.userSettings.selectedCountry.name}}</ion-note>
       </button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCurrency != 'undefined'" (click)="getCurrencies()">
         {{'main-menu.currency' | translate}}
-        <ion-note item-end class="menu-list-note txt-green">{{'main-menu.egp' | translate}}</ion-note>
+        <ion-note item-end class="menu-list-note txt-green">{{globals.userSettings.selectedCurrency.name}} - {{globals.userSettings.selectedCurrency.symbol}}</ion-note>
       </button>
     </ion-list>
 
@@ -65,7 +65,7 @@
     <!-- user widget -->
     <div class="user-widget margin-t-16 margin-b-16 padding-l-16 padding-b-8" *ngIf="globals.isUserLoggedIn">
       <span>
-        <img src="../assets/imgs/Cat-type-01.jpg" />
+        <img [src]="getImagePath()" />
       </span>
 
       <span class="padding-l-8">
@@ -81,9 +81,9 @@
 
     <!-- menu list -->
     <ion-list class="menu-list margin-b-16 padding-h-16">
-      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.account' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.account' | translate}}</button>
       <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.offers' | translate}}</button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-primary">{{'main-menu.order' | translate}}</button>
+      <button ion-item class="menu-list-content font-16 padding-0 txt-primary" *ngIf="globals.isUserLoggedIn">{{'main-menu.order' | translate}}</button>
     </ion-list>
 
     <ion-list class="menu-list margin-b-16 padding-h-16">
@@ -102,13 +102,13 @@
         {{'main-menu.language' | translate}}
         <ion-note item-end class="menu-list-note txt-green">{{'main-menu.lang-name' | translate}}</ion-note>
       </button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCountry != 'undefined'" (click)="getCountries()">
         {{'main-menu.country' | translate}}
-        <ion-note item-end class="menu-list-note txt-green">{{'main-menu.count-name' | translate}}</ion-note>
+        <ion-note item-end class="menu-list-note txt-green">{{globals.userSettings.selectedCountry.name}}</ion-note>
       </button>
-      <button ion-item class="menu-list-content font-16 padding-0 txt-gray">
+      <button ion-item class="menu-list-content font-16 padding-0 txt-gray" *ngIf="globals.userSettings.selectedCurrency != 'undefined'" (click)="getCurrencies()">
         {{'main-menu.currency' | translate}}
-        <ion-note item-end class="menu-list-note txt-green">{{'main-menu.egp' | translate}}</ion-note>
+        <ion-note item-end class="menu-list-note txt-green">{{globals.userSettings.selectedCurrency.name}} - {{globals.userSettings.selectedCurrency.symbol}}</ion-note>
       </button>
     </ion-list>
 
