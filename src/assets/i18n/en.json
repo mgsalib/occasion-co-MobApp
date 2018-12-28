@@ -120,6 +120,23 @@
     "create-account": "your account was created successfully",
     "payment-done": "your payment was processed successfully",
     "track-order": "for tracking your order your the following ticket code"
-    
+
+  },
+
+  "about": {
+    "title": "about us",
+    "text": "The Latest Mobile application on Android and iPhone in The KSA and the Gulf Countries to set up and organize all events and weddings in one Application as:",
+    "wedding-halls": "wedding halls",
+    "buffet": "buffet",
+    "drinks": "drinks",
+    "wedding-cards": "wedding cards",
+    "gifts": "gifts",
+    "shops-of-rose": "shops of roses",
+    "hotel-reservations": "hotel reservations",
+    "the-young": "the young",
+    "coiffure": "coiffure",
+    "photography-shops": "photography shops",
+    "travel": "travel",
+    "others": "And others"
   }
 }
