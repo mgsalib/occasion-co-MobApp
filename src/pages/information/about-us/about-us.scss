@@ -1,0 +1,23 @@
+page-about-us {
+  .image-box {
+      width: 100%;
+      height: 200px;
+      display: block;
+      overflow: hidden;
+      border-radius: 10px;
+      position: relative;
+
+      >img {
+          position: absolute;
+          top: -44px;
+      }
+  }
+
+  ul {
+    list-style: square;
+
+    li {
+      text-transform: capitalize;
+    }
+  }
+}

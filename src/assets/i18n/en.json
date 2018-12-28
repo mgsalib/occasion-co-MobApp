@@ -103,6 +103,24 @@
     "create-account": "your account was created successfully",
     "payment-done": "your payment was processed successfully",
     "track-order": "for tracking your order your the following ticket code"
+
+  },
+
+  "about": {
+    "title": "about us",
+    "text": "The Latest Mobile application on Android and iPhone in The KSA and the Gulf Countries to set up and organize all events and weddings in one Application as:",
+    "wedding-halls": "wedding halls",
+    "buffet": "buffet",
+    "drinks": "drinks",
+    "wedding-cards": "wedding cards",
+    "gifts": "gifts",
+    "shops-of-rose": "shops of roses",
+    "hotel-reservations": "hotel reservations",
+    "the-young": "the young",
+    "coiffure": "coiffure",
+    "photography-shops": "photography shops",
+    "travel": "travel",
+    "others": "And others"
   },
   "start": {
     "choose-country": "Choose Country",
@@ -114,5 +132,24 @@
     "title": "Occasion and Co",
     "info": "The latest mobile application on Android and iPhone  in the KSA and the Gulf countries to set up and organize all events and weddings",
     "plan": "Plan your settings"
+  },
+  "terms": {
+    "title": "terms and conditions",
+
+    "text-01": "To be a member of the Occasion & Co, first of all it is required that you fill in the registration form and then agree and undertake to comply with the provisions of the user agreement for Occasion, by filling in and ratifying the registration form or getting any services or ordering using this application, the user agrees to be bound by the user agreement of Occasion.",
+
+    "text-02": "You are responsible for making arrangements necessary for you to have access to the application, you are also responsible for ensuring that all persons who access the application through your internet connection are aware of these application items and that they comply with them. "
+  },
+
+  "privacy": {
+    "title": "privacy policy",
+
+    "text-01": "Occasion may temporary suspend or completely cease the system operation at any time.",
+
+    "text-02": "Occasion shall not have any responsibility against the members or any third parties due to the temporary suspension or completely cessation of the system operation.",
+
+    "text-03": "Occasion has the ownership and copyrights arising from the ownership of the information, documents, software, designs, graphics and etc.  Which are produced by itself.",
+
+    "text-04": "Occasion is not responsible for any item ordered and not delivered by the market due to unavailability"
   }
 }
