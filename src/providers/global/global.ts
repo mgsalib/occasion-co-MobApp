@@ -13,7 +13,16 @@ export class GlobalProvider {
   public accessToken: string = "";
   public userId: string = "";
   public userInfo: any = {};
-
+  public userSettings: any = {
+    selectedCountry: {},
+    selectedCurrency: {},
+    selectedCity: {
+      name: "",
+      id: ""
+    }
+  };
+  public shoppingCart: any = [];
+  
   public servicesURL: any = {
     login: {
       url: "User/AuthenticateUser"
@@ -37,7 +46,7 @@ export class GlobalProvider {
     },
     markets:
     {
-      url: "Market/GetByCategoryId"
+      url: "Market/"
     },
     countries:
     {
@@ -45,6 +54,14 @@ export class GlobalProvider {
     },
     markets_By_Loc: {
       url: "Market/GetByCategroyNearMe"
+    },
+    currencies:
+    {
+      url: "Currency/Get"
+    },
+    cities:
+    {
+      url: "City/GetByCountryID"
     }
   }
   constructor()

@@ -78,11 +78,9 @@
           <h6 class="txt-white font-14 margin-0"> {{item.title}}</h6>
           <!-- rate bar -->
           <div class="rate-bar">
-            <ion-icon ios="ios-star" md="md-star"></ion-icon>
-            <ion-icon ios="ios-star" md="md-star"></ion-icon>
-            <ion-icon ios="ios-star" md="md-star"></ion-icon>
-            <ion-icon ios="ios-star-half" md="md-star-half"></ion-icon>
-            <ion-icon ios="ios-star-outline" md="md-star-outline"></ion-icon>
+            <ionic3-star-rating activeIcon="ios-star" defaultIcon="ios-star-outline" activeColor="#FFD108" defaultColor="#FFD108" readonly="false"
+              [rating]="item.rating">
+            </ionic3-star-rating>
           </div>
         </ion-col>
       </ng-container>

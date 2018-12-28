@@ -32,10 +32,6 @@ export class ProductPage {
     });
   }
 
-  AddToCart() {
-    this.navCtrl.push("ShoppingCartPage");
-  }
-
   call(num) {
     this.callNumber.callNumber(num, true)
       .then(res => console.log('Launched dialer!', res))
@@ -44,5 +40,14 @@ export class ProductPage {
 
   openProductDetails(item) {
     this.navCtrl.push("ProductDetailsPage", item);
+  }
+
+  drawStart(rate) {
+    var html = "";
+    rate = 4;
+    for (var i = 0; i < rate; i++) {
+      html += "<ion-icon name='star'></ion-icon>";
+    }
+    return html;
   }
 }
